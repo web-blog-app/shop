@@ -1,0 +1,26 @@
+footer {
+    background: $gray-background;
+    color: $white;
+    padding: 40px 0;
+    img{
+      width: 30px;
+    }
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;    
+
+    ul {
+      display: flex;
+      width: 22%;
+      justify-content: space-between;
+    }
+
+    a {
+      color: $white;
+      &:hover {
+            color: darken($red, 10%);
+          }
+    }
+  }
