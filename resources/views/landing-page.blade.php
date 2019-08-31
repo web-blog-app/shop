@@ -1,7 +1,7 @@
 
     @extends('layouts.layout')
 
-    @section('title', 'Products')
+    @section('title', 'A2 Company')
 
     @section('content')
         <div id="app">
