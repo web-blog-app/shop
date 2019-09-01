@@ -21,3 +21,12 @@ Vue.component('blog-posts', require('./components/BlogPosts'));
 const app = new Vue({
     el: '#app'
 });
+
+
+$(document).ready(function(){
+  $('.main-slider').slick({
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 2000
+  });
+});

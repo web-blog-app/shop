@@ -1,0 +1,323 @@
+.main-slider {
+    margin-top: 10px;
+    overflow: hidden;
+
+    .slide {
+        color: #eee;
+        max-height: 490px;
+
+        .description {
+            position: relative;
+            padding-left: 150px;
+            padding-top: 25px;
+            font-size: 40px;
+            font-family: 'Poiret One', cursive;
+        }
+
+        .description-container {
+            align-self: stretch;
+            min-width: 45%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50%;
+            position: relative;
+            box-shadow: 0 0 25px -1px rgba(0,0,0, .7);
+
+            .slide-layer {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, .7);
+            }
+        }
+
+        &-content {
+            position: relative;
+        }
+
+        img {
+            max-height: 250px;
+            max-width: 50%;
+            margin-left: 250px;
+        }
+
+        &-button {
+            bottom: -50px;
+            left: -50px;
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            background-color: red;
+            color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 25px 3px rgba(255,0,0, .7);
+            text-align: center;
+            padding-top: 52px;
+            box-sizing: border-box;
+            font-family: 'Poiret One', cursive;
+            font-weight: 800;
+            font-size: 28px;
+            transition: box-shadow .3s ease-in-out;
+            cursor: pointer;
+            animation: radial-pulse 1s infinite;
+
+            &:hover {
+                box-shadow: 0 0 30px 8px rgba(255,0,0, .8);
+                transition: box-shadow .3s ease-in-out;
+            }
+        }
+    }
+
+    .slide-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 15px 90px;
+    }
+
+    .slick-dots {
+        padding: 25px 0;
+
+        li {
+            button {
+                &::before {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes radial-pulse {
+    0% {
+        box-shadow: 0 0 25px 3px rgba(255,0,0, .7);
+        background-color: red;
+    }
+
+    50% {
+        box-shadow: 0 0 30px 8px rgba(255,0,0, .8);
+        background-color: #BF0000;
+    }
+
+    100% {
+        box-shadow: 0 0 25px 3px rgba(255,0,0, .7);
+        background-color: red;
+    }
+}
+
+.main-catalog {
+    font-family: 'Poiret One', cursive;
+
+    .catalog-button {
+        font-size: 25px;
+        padding: 15px 25px;
+        border-radius: 5px;
+        font-weight: 900;
+        max-width: 205px;
+        margin: 35px auto 0;
+        cursor: pointer;
+        box-shadow: 0 0 25px -1px rgba(0,0,0, .7);
+        transition: background-color .5s ease, box-shadow .5s ease, color .5s ease;
+
+        &:hover {
+            background-color: red;
+            color: #fff;
+            box-shadow: 0 0 35px -1px rgba(0,0,0, .7);
+        }
+    }
+
+    &-title {
+        font-size: 58px;
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .main-product-list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 55px;
+    }
+
+    .product {
+        cursor: pointer;
+        flex-basis: 18%;
+        box-shadow: 0 0 25px -1px rgba(0,0,0, .7);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-weight: 800;
+        padding: 15px;
+        min-height: 625px;
+        transition: transform .3s ease;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+            transform: scale(1.1);
+            transition: transform .3s ease;
+
+            .product-price,
+            .product-title {
+                color: #6c9acc;
+            }
+        }
+
+        &-title {
+            text-align: center;
+            font-size: 32px;
+            padding: 15px 0;
+            line-height: 1.3;
+        }
+
+        &-description {
+            font-size: 22px;
+            padding: 15px 0;
+            line-height: 1.3;
+
+            .warning {
+                font-weight: 900;
+                font-size: 34px;
+                background-color: red;
+                color: #fff;
+            }
+
+            .attention {
+                font-weight: 900;
+                font-size: 34px;
+                background-color: #740080;
+                color: #fff;
+            }
+        }
+
+        &-price {
+            font-size: 26px;
+            text-align: center;
+        }
+
+        &-button {
+            border-radius: 10px;
+            border: 2px solid #6c9acc;
+            color: #6c9acc;
+            font-size: 26px;
+            text-align: center;
+            width: 175px;
+            margin: 10px auto 15px;
+            transition: color .1s ease;
+
+            &:hover {
+                transition: color .1s ease;
+                color: red;
+                border-color: red;
+            }
+        }
+
+        img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: contain;
+        }
+
+        .wave {
+            background: red;
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            text-align: center;
+            right: -20px;
+            top: 200px;
+            box-shadow: 0 0 25px -1px rgba(0,0,0, .7);
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 80px;
+                width: 80px;
+                background: red;
+            }
+
+            &:before {
+                transform: rotate(-30deg);
+            }
+
+            &::after {
+                transform: rotate(-60deg);
+                content: "-50%";
+                color: white;
+                padding-top: 14px;
+                box-sizing: border-box;
+                font-size: 31px;
+            }
+        }
+    }
+}
+
+.map {
+    padding: 105px 85px;
+    font-family: 'Poiret One', cursive;
+
+    &-container {
+        box-shadow: 0 0 25px -1px rgba(0,0,0, .7);
+    }
+
+    &-title {
+        padding: 15px 0 35px;
+        font-weight: 900;
+        font-size: 58px;
+    }
+
+    &-subtitle {
+        padding-bottom:35px;
+        font-weight: 900;
+        font-size: 38px;
+    }
+}
+
+.advantages {
+    background: #f4f9fd;
+    padding-top: 55px;
+    font-family: 'Poiret One', cursive;
+    font-weight: 900;
+
+    &-about {
+        padding: 55px 85px 95px;
+        font-size: 26px;
+    }
+
+    &-list {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .advantage-item {
+        flex-basis: 50%;
+        padding: 35px;
+        box-sizing: border-box;
+
+        &:first-child {
+            border-bottom: 1px solid #d4cdcd;
+            border-right: 1px solid #d4cdcd;
+        }
+
+        &:last-child {
+            border-top: 1px solid #d4cdcd;
+            border-left: 1px solid #d4cdcd;
+        }
+    }
+
+    .advantage-title {
+        font-size: 30px;
+        padding-bottom: 35px;
+    }
+
+    .advantages-description {
+        font-size: 22px;
+    }
+}

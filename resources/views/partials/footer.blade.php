@@ -1,9 +1,9 @@
-<footer>
-    <div class="footer-content container">
-        <div class="made">        	
-        	<img src="img/as.png" alt="A&S">
-                    Студия A&S 2019               
-        </div>
-        {{ menu('footer', 'partials.menus.footer') }}
-    </div> <!-- end footer-content -->
+<footer class="footer">
+    <div class="footer-description">
+        © 2019 BeruBe.ru - надежное оборудование, проверенный инструмент
+    </div>
+    <ul class="footer-menu">
+        <li>Каталог</li>
+        <li>Контакты</li>
+    </ul>
 </footer>

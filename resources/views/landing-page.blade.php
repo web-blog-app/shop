@@ -1,67 +1,224 @@
+@extends('layouts.layout')
+@section('title', 'A2 Company')
 
-    @extends('layouts.layout')
-
-    @section('title', 'A2 Company')
-
-    @section('content')
-        <div id="app">
-            <div class="dark-bg">
-            <header class="with-background">               
-                <div class="hero container">
-                    <div class="hero-copy">
-                        <h1>Изделия ручной работы из дерева</h1>
-                        <p>Предложенные нами изделия из дерева способны оживить дизайн интерьера, добавить ему эксклюзивной изюминки, а также стать незаменимым помощником при приготовлении различных блюд. Такая продукция станет не только функциональной вещью на любой кухне, но и подарит хорошее настроение всем, кто будет ею пользоваться.</p>
-                        <div class="hero-buttons">
-                            <a href="#" class="button button-white">Подробнее о Нас</a>
-                            
+@section('content')
+    <div class="application">
+        <div class="main-slider">
+            <div class="slide">
+                <div class="slide-content">
+                    <img src="{{ asset('/img/slider/slider1.png') }}" alt="">
+                    <div class="description-container" style="background-image:url('{{ asset('/img/slider/slidebg1.jpg') }}')">
+                        <div class="slide-layer"></div>
+                        <ul class="description">
+                            <li>
+                                Надёжность
+                            </li>
+                            <li>
+                                Доставка по всей России!
+                            </li>
+                            <li>
+                                Цена всего 29999 руб.
+                            </li>
+                        </ul>
+                        <div class="slide-button">
+                            Подробнее
                         </div>
-                    </div> 
-
-                    <div class="hero-image">
-                        <img src="img/box.png" alt="hero image">
-                    </div> 
-                </div> <!-- end hero -->
+                    </div>
                 </div>
-            </header>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <img src="{{ asset('/img/slider/slider2.png') }}" alt="">
+                    <div class="description-container" style="background-image:url('{{ asset('/img/slider/slidebg2.jpg') }}')">
+                        <div class="slide-layer"></div>
+                        <ul class="description">
+                            <li>
+                                Выбор года!
+                            </li>
+                            <li>
+                                Качество
+                            </li>
+                            <li>
+                                Скидки!
+                            </li>
+                        </ul>
+                        <div class="slide-button">
+                            Подробнее
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <img src="{{ asset('/img/slider/slide1.jpg') }}" alt="">
+                    <div class="description-container" style="background-image:url('{{ asset('/img/slider/slidebg1.jpg') }}')">
+                        <div class="slide-layer"></div>
+                        <ul class="description">
+                            <li>
+                                Хит продаж!
+                            </li>
+                            <li>
+                                Маска в подарок!
+                            </li>
+                            <li>
+                                Гарантия 3 года!
+                            </li>
+                        </ul>
+                        <div class="slide-button">
+                            Подробнее
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <div class="featured-section">
-
-                <div class="container">
-                    <h1 class="text-center">Рекомендованные товары </h1>
-
-                    <p class="section-description">Яркость, выразительность и самобытность ручных работ из дерева позволяет использовать их для декорирования любого помещения, создавая при этом уникальные интерьерные решения.</p>
-
-                    <div class="products text-center">
-                        @foreach ($products as $product)
-                            <div class="product">
-                                <a href="{{ route('shop.show', $product->slug) }}">
-                                    <img src="{{ productImage($product->image) }}" alt="product">
-                                </a>
-                                <a href="{{ route('shop.show', $product->slug) }}">
-                                    <div class="product-name">
-                                        {{ $product->name }}
-                                    </div>
-                                </a>
-                                <div class="product-price">{{ $product->presentPrice() }}</div>
-                            </div>
-                        @endforeach
-
-                    </div> <!-- end products -->
-
-                    <div class="text-center button-container">
-                        <a href="{{ route('shop.index') }}" class="button">Перейти в магазин </a>
+        <div class="main-catalog">
+            <div class="main-catalog-title">
+                Мы рекомендуем обратить внимание.
+            </div>
+            <div class="main-product-list">
+                <div class="product">
+                    <div class="product-title">
+                        Solaris MIG-205
+                    </div>
+                    <img src="{{ asset('/img/slider/slide1.jpg') }}" alt="">
+                    <div class="product-description">
+                        Полуавтомат сварочный Solaris MIG-205 (MIG/MAG/FLUX/MMA)
+                        <span class="warning">
+                            Имеет три режима сварки!
+                        </span>
+                    </div>
+                    <div class="product-price">
+                        16250 руб.
+                    </div>
+                    <div class="product-button">
+                        Купить
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-title">
+                        Solaris MIG-205
+                    </div>
+                    <img src="{{ asset('/img/slider/slide2.jpg') }}" alt="">
+                    <div class="product-description">
+                        Полуавтомат сварочный Solaris TOPMIG-225
+                        <br>
+                        <span class="warning">
+                            Постовляется в комплекте со сварщиком!
+                        </span>
+                    </div>
+                    <div class="product-price">
+                        17000 руб.
+                    </div>
+                    <div class="product-button">
+                        Купить
                     </div>
 
-                </div> <!-- end container -->
+                    <div class="wave">-50%</div>
+                </div>
+                <div class="product">
+                    <div class="product-title">
+                        Solaris MIG-205
+                    </div>
+                    <img src="{{ asset('/img/slider/slider1.png') }}" alt="">
+                    <div class="product-description">
+                        Полуавтомат сварочный Solaris MIG-29
+                        <br>
+                        <span class="attention">
+                            Акция до конца сентября!
+                        </span>
+                    </div>
+                    <div class="product-price">
+                        17500 руб.
+                    </div>
+                    <div class="product-button">
+                        Купить
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-title">
+                        Solaris MIG-31
+                    </div>
+                    <img src="{{ asset('/img/slider/slider2.png') }}" alt="">
+                    <div class="product-description">
+                        Полуавтомат сварочный Solaris MIG-205 (MIG/MAG/FLUX/MMA)
+                    </div>
+                    <div class="product-price">
+                        16250 руб.
+                    </div>
+                    <div class="product-button">
+                        Купить
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-button">
+                Перейти в каталог
+            </div>
+        </div>
+        <div class="map">
+            <div class="map-title">
+                ДОСТАВИМ БЕСПЛАТНО ПО РОССИИ!
+            </div>
+            <div class="map-subtitle">
+                Если вы не нашли свой город, свяжитесь с нами, мы что-нибудь придумаем...
+            </div>
+            <div class="map-container">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A37fe8f99a90c2e486d278811fd39136476d50ab57caf3b63b7acf8ab170e552c&amp;width=100%25&amp;height=720&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+        </div>
+        <div class="advantages">
+            <div class="advantages-list">
+                <div class="advantage-item">
+                    <img src="{{ asset('/img/advantages/a1.png') }}" alt="">
 
-            </div> <!-- end featured-section -->
+                    <div class="advantage-title">Действуем чётко</div>
+                    <div class="advantages-description">
+                        Мы всегда помним о пожеланиях клиентов и никогда не забываем
+                        о их предпочтениях. Это позволяет работать максимально эффективно
+                    </div>
+                </div>
+                <div class="advantage-item">
+                    <img src="{{ asset('/img/advantages/a2.png') }}" alt="">
 
-            <blog-posts></blog-posts>
-        </div> <!-- end #app -->
+                    <div class="advantage-title">Все новинки у нас!</div>
+                    <div class="advantages-description">
+                        Мы всегда помним о пожеланиях клиентов и никогда не забываем
+                        о их предпочтениях. Это позволяет работать максимально эффективно
+                    </div>
+                </div>
+                <div class="advantage-item">
+                    <img src="{{ asset('/img/advantages/a3.jpg') }}" alt="">
 
-        @endsection
-        @section('extra-js')
-        <script src="js/app.js"></script>
-        @endsection
- 
+                    <div class="advantage-title">Все виды оплаты</div>
+                    <div class="advantages-description">
+                        Мы всегда помним о пожеланиях клиентов и никогда не забываем
+                        о их предпочтениях. Это позволяет работать максимально эффективно
+                    </div>
+                </div>
+                <div class="advantage-item">
+                    <img src="{{ asset('/img/advantages/a4.jpg') }}" alt="">
+
+                    <div class="advantage-title">Доставляем!</div>
+                    <div class="advantages-description">
+                        Мы всегда помним о пожеланиях клиентов и никогда не забываем
+                        о их предпочтениях. Это позволяет работать максимально эффективно
+                    </div>
+                </div>
+            </div>
+            <div class="advantages-about">
+                Компания «А2» поставляет оборудование, инструменты, профессиональные расходные материалы и
+                комплектующие. Наш клиент взаимодействует со специалистами своего дела. Мы следим за новинками
+                рынка и «куда дует ветер» знаем. Поэтому, мы предлагаем нашим партнерам надежное оборудование,
+                проверенный инструмент, качественные комплектующие и расходные материалы по оптимальным ценам.
+                При работе мы выстраиваем хорошие дружеские деловые отношения. Это делает коммуникацию удобной,
+                а результат эффективным. Наша компания надеется на успешную совместную деятельность!
+            </div>
+        </div>
+    </div> <!-- end #app -->
+@endsection
+
+@section('extra-js')
+    <script src="js/app.js"></script>
+@endsection
+
 

@@ -1,26 +1,27 @@
-footer {
-    background: $gray-background;
-    color: $white;
-    padding: 40px 0;
-    img{
-      width: 30px;
-    }
-  }
+.footer {
+  background-color: #061c32;
+  color: #e8e8e8;
+  padding: 25px 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poiret One', cursive;
+  font-weight: 900;
+  font-size: 22px;
+  box-shadow: 0px 0px 25px -1px rgba(0,0,0,.7);
 
-  .footer-content {
+  &-menu {
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between;
 
-    ul {
-      display: flex;
-      width: 22%;
-      justify-content: space-between;
-    }
+    li {
+      margin-right: 35px;
+      cursor: pointer;
 
-    a {
-      color: $white;
       &:hover {
-            color: darken($red, 10%);
-          }
+        color: #6c9acc;
+        text-decoration: underline;
+      }
     }
   }
+}
