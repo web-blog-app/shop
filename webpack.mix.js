@@ -1,4 +1,4 @@
-let mix = require('laravel-mix');
+var mix = require('laravel-mix');
 
 /*
  |--------------------------------------------------------------------------
@@ -13,6 +13,5 @@ let mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css')
-   .sass('resources/sass/responsive.scss', 'public/css')
    .sourceMaps()
    .browserSync('laravel-ecommerce-example.test');

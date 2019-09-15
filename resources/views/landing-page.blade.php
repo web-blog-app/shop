@@ -5,7 +5,7 @@
     <div class="application">
         <div class="main-slider">
             <div class="slide">
-                <div class="slide-content">
+                <div class="slide-content container">
                     <img src="{{ asset('/img/slider/slider1.png') }}" alt="">
                     <div class="description-container" style="background-image:url('{{ asset('/img/slider/slidebg1.jpg') }}')">
                         <div class="slide-layer"></div>
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="slide">
-                <div class="slide-content">
+                <div class="slide-content container">
                     <img src="{{ asset('/img/slider/slider2.png') }}" alt="">
                     <div class="description-container" style="background-image:url('{{ asset('/img/slider/slidebg2.jpg') }}')">
                         <div class="slide-layer"></div>
@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div class="slide">
-                <div class="slide-content">
+                <div class="slide-content container">
                     <img src="{{ asset('/img/slider/slide1.jpg') }}" alt="">
                     <div class="description-container" style="background-image:url('{{ asset('/img/slider/slidebg1.jpg') }}')">
                         <div class="slide-layer"></div>
@@ -73,7 +73,7 @@
         </div>
 
         <div class="main-catalog">
-            <div class="main-catalog-title">
+            <div class="main-catalog-title title">
                 Мы рекомендуем обратить внимание.
             </div>
             <div class="main-product-list">
@@ -155,18 +155,34 @@
                 Перейти в каталог
             </div>
         </div>
-        <div class="map">
-            <div class="map-title">
+        <div class="map container">
+            <div class="map-title title">
                 ДОСТАВИМ БЕСПЛАТНО ПО РОССИИ!
             </div>
-            <div class="map-subtitle">
+            <div class="map-subtitle subtitle">
                 Если вы не нашли свой город, свяжитесь с нами, мы что-нибудь придумаем...
             </div>
-            <div class="map-container">
-                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A37fe8f99a90c2e486d278811fd39136476d50ab57caf3b63b7acf8ab170e552c&amp;width=100%25&amp;height=720&amp;lang=ru_RU&amp;scroll=true"></script>
+            <div class="map-content">
+                <div class="map-info container">
+                    <div class="address-title">
+                        Компания А2 располагается по адресу:
+                    </div>
+                    <div class="address">
+                        Санкт-Петербург ул. Любых Инструметов д.1 пом.1
+                    </div>
+                    <div class="phone">
+                        + 7 (965) 123-12-12
+                    </div>
+                    <div class="recall-form-button">
+                        заказать звонок
+                    </div>
+                </div>
+                <div class="map-container">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A37fe8f99a90c2e486d278811fd39136476d50ab57caf3b63b7acf8ab170e552c&amp;width=100%25&amp;height=520&amp;lang=ru_RU&amp;"></script>
+                </div>
             </div>
         </div>
-        <div class="advantages">
+        <div class="advantages container">
             <div class="advantages-list">
                 <div class="advantage-item">
                     <img src="{{ asset('/img/advantages/a1.png') }}" alt="">
@@ -205,20 +221,6 @@
                     </div>
                 </div>
             </div>
-            <div class="advantages-about">
-                Компания «А2» поставляет оборудование, инструменты, профессиональные расходные материалы и
-                комплектующие. Наш клиент взаимодействует со специалистами своего дела. Мы следим за новинками
-                рынка и «куда дует ветер» знаем. Поэтому, мы предлагаем нашим партнерам надежное оборудование,
-                проверенный инструмент, качественные комплектующие и расходные материалы по оптимальным ценам.
-                При работе мы выстраиваем хорошие дружеские деловые отношения. Это делает коммуникацию удобной,
-                а результат эффективным. Наша компания надеется на успешную совместную деятельность!
-            </div>
         </div>
     </div> <!-- end #app -->
 @endsection
-
-@section('extra-js')
-    <script src="js/app.js"></script>
-@endsection
-
-
