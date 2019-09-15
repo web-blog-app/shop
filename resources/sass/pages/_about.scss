@@ -1,0 +1,43 @@
+.about-content {
+  padding: 35px 45px;
+
+  @media (max-width: $screen-xs-max) {
+    padding: 25px 15px;
+  }
+
+  a {
+    color: $c-links-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    margin: 0;
+    padding: 15px 0;
+    word-break: break-word;
+
+    &:nth-child(odd) {
+      background-color: $c-paragraphs-bg-even;
+    }
+  }
+
+  ol {
+    @media (max-width: $screen-xs-max) {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      margin: 15px;
+      padding-left: 25px;
+      word-break: break-word;
+
+      &:nth-child(odd) {
+        background-color: $c-paragraphs-bg-even;
+      }
+    }
+  }
+}
