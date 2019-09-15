@@ -1,0 +1,21 @@
+.company-info {
+  display: flex;
+
+  @media (max-width: $screen-xs-max) {
+    flex-wrap: wrap;
+  }
+
+  .address,
+  .phones {
+    padding: 10px;
+    flex-basis: 50%;
+
+    @media (max-width: $screen-xs-max) {
+      flex-basis: 100%;
+    }
+  }
+
+  .phones {
+    text-align: center;
+  }
+}
