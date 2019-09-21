@@ -222,5 +222,38 @@
                 </div>
             </div>
         </div>
+
+        <div class="feedback-section">
+            <div class="title">Отзывы о нас</div>
+            <div class="feedback-slider">
+                <div class="feedback-slide">
+                    <div class="feedback-slide-content container">
+                        <div class="feedback-image" style="background-image:url('{{ asset('/img/slider/feedback.jpg') }}')"></div>
+                        <div class="feedback-description-container">
+                            Заказывал шуруповерт Sturm!, договорились с менеджером, обсудили детали сделки. Доставили до подъезда.
+                            Был нюанс: осевое биение патрона шуруповерта. Все без проблем заменили. Спасибо за Ваш труд.
+                        </div>
+                    </div>
+                </div>
+                <div class="feedback-slide">
+                    <div class="feedback-slide-content container">
+                        <div class="feedback-image" style="background-image:url('{{ asset('/img/slider/feedback1.jpg') }}')"></div>
+                        <div class="feedback-description-container">
+                            Заказывал шуруповерт Sturm!, договорились с менеджером, обсудили детали сделки. Доставили до подъезда.
+                            Был нюанс: осевое биение патрона шуруповерта. Все без проблем заменили. Спасибо за Ваш труд.
+                        </div>
+                    </div>
+                </div>
+                <div class="feedback-slide">
+                    <div class="feedback-slide-content container">
+                        <div class="feedback-image" style="background-image:url('{{ asset('/img/slider/feedback2.jpg') }}')"></div>
+                        <div class="feedback-description-container">
+                            Заказывал шуруповерт Sturm!, договорились с менеджером, обсудили детали сделки. Доставили до подъезда.
+                            Был нюанс: осевое биение патрона шуруповерта. Все без проблем заменили. Спасибо за Ваш труд.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div> <!-- end #app -->
 @endsection

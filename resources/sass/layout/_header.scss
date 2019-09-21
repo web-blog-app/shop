@@ -48,6 +48,10 @@
   font-family: 'Ruda', sans-serif;
   font-weight: 100;
   color: $c-header-text;
+
+  @media (max-width: $screen-md-max) {
+    font-size: 16px;
+  }
   
   .hamburger {
     width: 50px;
@@ -140,6 +144,28 @@
     span {
       display: block;
       padding: 5px;
+    }
+  }
+
+  .menu-list {
+    @media (max-width: $screen-sm-max) {
+      display: none;
+    }
+
+    li {
+      display: block;
+      padding: 5px 0;
+    }
+
+    a {
+      font-family: 'Ruda', sans-serif;
+      font-weight: 100;
+      color: $c-header-text;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 

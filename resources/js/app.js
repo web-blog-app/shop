@@ -1,19 +1,96 @@
-// import slick from 'slick-carousel';
+import slick from 'slick-carousel';
+import MicroModal from 'micromodal';
+import Inputmask from 'inputmask';
 
 require('./bootstrap');
-var slick = require('slick-carousel');
+
+const validationRegexp = {
+  text: '^(?!\s*$).+',
+  phone: '^(?!\s*$).+'
+};
 
 function toggleMobileMenu() {
   $('.mobile-menu').toggleClass('active');
 }
 
+function validate(form) {
+  const $formInput = $(form).find('.form-input');
+
+  $formInput.each(function(index, element){
+    if(!(new RegExp(validationRegexp[$(element).data('validate')]).test($(element).val()))) {
+      $(element).parent().find('.form-error').addClass('active');
+    } else {
+      $(element).parent().find('.form-error').removeClass('active');
+    }
+  });
+
+  return !$(form).find('.form-group').find('.form-error.active').length;
+}
+
+function sendRequest(event) {
+  event.preventDefault();
+
+  const self = this;
+
+  if ($('.submit-button').attr('disabled')) {
+    return;
+  }
+
+  if(!validate(self)) {
+    return
+  }
+
+  $('.submit-button').attr('disabled', true);
+
+  $.ajax({
+    url: 'url',
+    type: 'POST',
+    dataType: 'html',
+    data: $(this).serialize(),
+    success: function() {
+      $(self).parent().find('.form').hide();
+      $(self).parent().find('.form-success-msg').show();
+      $('.submit-button').attr('disabled', false);
+    },
+    error: function() {
+      $('.submit-button').attr('disabled', false);
+      $('.form-general-error').addClass('active');
+    }
+  });
+}
+
 $(document).ready(function(){
+  MicroModal.init();
+
   $('.main-slider').slick({
     dots: true,
-    // autoplay: true,
-    // autoplaySpeed: 2000
+    autoplay: true,
+    autoplaySpeed: 2000
+  });
+
+  $('.feedback-slider').slick({
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 2000
   });
 
   $('.hamburger').on('click', toggleMobileMenu);
   $('.close').on('click', toggleMobileMenu);
+
+  $('.form').on('submit', sendRequest);
+
+  $('.form-input').on('blur', function () {
+    $(this).val().trim();
+  });
+
+  $('.form-input').on('focus', function () {
+    if ($(this).data('validate').includes('phone')) {
+      Inputmask({
+        mask: '+7(999)999-99-99',
+        showMaskOnHover: false,
+        clearMaskOnLostFocus: true,
+        autoGroup: true
+      }).mask(this);
+    }
+  });
 });

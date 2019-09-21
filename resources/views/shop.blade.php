@@ -4,66 +4,196 @@
 
 
 @section('content')
+    <div class="catalog-page">
+      <div class="side-bar">
+          <ul class="categories-list">
+              <li class="categories-list-item actions">Акции!</li>
+              <li class="categories-list-item active">Сварочные аппараты</li>
+              <li class="categories-list-item">Инструменты</li>
+              <li class="categories-list-item">Сад и огород</li>
+              <li class="categories-list-item">Сервис</li>
+          </ul>
+      </div>
 
-    @component('components.breadcrumbs')
-        <a href="/">Домашняя</a>
-        <i class="fa fa-chevron-right breadcrumb-separator"></i>
-        <span>Магазин</span>
-    @endcomponent
-
-    <div class="container">
-        @if (session()->has('success_message'))
-            <div class="alert alert-success">
-                {{ session()->get('success_message') }}
-            </div>
-        @endif
-
-        @if(count($errors) > 0)
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-    </div>
-
-    <div class="products-section container">
-        <div class="sidebar">
-            <h3>Категории:</h3>
-            <ul>
-                @foreach ($categories as $category)
-                    <li class="{{ setActiveCategory($category->slug) }}"><a href="{{ route('shop.index', ['category' => $category->slug]) }}">{{ $category->name }}</a></li>
-                @endforeach
-            </ul>
-        </div> <!-- end sidebar -->
-        <div>
-            <div class="products-header">
-                <h1 class="stylish-heading">{{ $categoryName }}</h1>
-                <div>
-                    <strong>Цена: </strong>
-                    <a href="{{ route('shop.index', ['category'=> request()->category, 'sort' => 'low_high']) }}">По возрастанию</a> |
-                    <a href="{{ route('shop.index', ['category'=> request()->category, 'sort' => 'high_low']) }}">По убыванию</a>
-
-                </div>
-            </div>
-
-            <div class="products text-center">
-                @forelse ($products as $product)
-                    <div class="product">
-                        <a href="{{ route('shop.show', $product->slug) }}"><img src="{{ productImage($product->image) }}" alt="product"></a>
-                        <a href="{{ route('shop.show', $product->slug) }}"><div class="product-name">{{ $product->name }}</div></a>
-                        <div class="product-price">{{ $product->presentPrice() }}</div>
-                    </div>
-                @empty
-                    <div style="text-align: left">Ничего не найдено</div>
-                @endforelse
-            </div> <!-- end products -->
-
-            <div class="spacer"></div>
-            {{ $products->appends(request()->input())->links() }}
-        </div>
+      <div class="products-container">
+          <div class="sort-menu">
+              <ul class="sort-menu-list">
+                  <li class="sort-menu-list-item">Сначала Акции</li>
+                  <li class="sort-menu-list-item active">Сначала дешёвые</li>
+                  <li class="sort-menu-list-item">Сначала дорогие</li>
+              </ul>
+          </div>
+          <div class="product-cards">
+              <div class="product-card">
+                  <img class="card-image" src="{{ asset('/img/slider/slide1.jpg') }}" alt="">
+                  <div class="card-title">
+                      Сварочный аппарат ТПИ-12345
+                  </div>
+                  <div class="card-price">
+                      19 999р.
+                  </div>
+                  <div class="card-button">
+                      в корзину
+                  </div>
+              </div>
+              <div class="product-card">
+                  <img class="card-image" src="{{ asset('/img/slider/slide2.jpg') }}" alt="">
+                  <div class="card-title">
+                      Сварочный аппарат ТПИ-12345
+                  </div>
+                  <div class="card-price">
+                      19 999р.
+                  </div>
+                  <div class="card-button">
+                      в корзину
+                  </div>
+              </div>
+              <div class="product-card">
+                  <img class="card-image" src="{{ asset('/img/slider/slide1.jpg') }}" alt="">
+                  <div class="card-title">
+                      Сварочный аппарат ТПИ-12345
+                  </div>
+                  <div class="card-price">
+                      19 999р.
+                  </div>
+                  <div class="card-button">
+                      в корзину
+                  </div>
+              </div>
+              <div class="product-card">
+                  <img class="card-image" src="{{ asset('/img/slider/slide2.jpg') }}" alt="">
+                  <div class="card-title">
+                      Сварочный аппарат ТПИ-12345
+                  </div>
+                  <div class="card-price">
+                      19 999р.
+                  </div>
+                  <div class="card-button">
+                      в корзину
+                  </div>
+              </div>
+              <div class="product-card">
+                  <img class="card-image" src="{{ asset('/img/slider/slide1.jpg') }}" alt="">
+                  <div class="card-title">
+                      Сварочный аппарат ТПИ-12345
+                  </div>
+                  <div class="card-price">
+                      19 999р.
+                  </div>
+                  <div class="card-button">
+                      в корзину
+                  </div>
+              </div>
+              <div class="product-card">
+                  <img class="card-image" src="{{ asset('/img/slider/slide2.jpg') }}" alt="">
+                  <div class="card-title">
+                      Сварочный аппарат ТПИ-12345
+                  </div>
+                  <div class="card-price">
+                      19 999р.
+                  </div>
+                  <div class="card-button">
+                      в корзину
+                  </div>
+              </div>
+              <div class="product-card">
+                  <img class="card-image" src="{{ asset('/img/slider/slide1.jpg') }}" alt="">
+                  <div class="card-title">
+                      Сварочный аппарат ТПИ-12345
+                  </div>
+                  <div class="card-price">
+                      19 999р.
+                  </div>
+                  <div class="card-button">
+                      в корзину
+                  </div>
+              </div>
+              <div class="product-card">
+                  <img class="card-image" src="{{ asset('/img/slider/slide2.jpg') }}" alt="">
+                  <div class="card-title">
+                      Сварочный аппарат ТПИ-12345
+                  </div>
+                  <div class="card-price">
+                      19 999р.
+                  </div>
+                  <div class="card-button">
+                      в корзину
+                  </div>
+              </div>
+              <div class="product-card">
+                  <img class="card-image" src="{{ asset('/img/slider/slide1.jpg') }}" alt="">
+                  <div class="card-title">
+                      Сварочный аппарат ТПИ-12345
+                  </div>
+                  <div class="card-price">
+                      19 999р.
+                  </div>
+                  <div class="card-button">
+                      в корзину
+                  </div>
+              </div>
+              <div class="product-card">
+                  <img class="card-image" src="{{ asset('/img/slider/slide2.jpg') }}" alt="">
+                  <div class="card-title">
+                      Сварочный аппарат ТПИ-12345
+                  </div>
+                  <div class="card-price">
+                      19 999р.
+                  </div>
+                  <div class="card-button">
+                      в корзину
+                  </div>
+              </div>
+              <div class="product-card">
+                  <img class="card-image" src="{{ asset('/img/slider/slide1.jpg') }}" alt="">
+                  <div class="card-title">
+                      Сварочный аппарат ТПИ-12345
+                  </div>
+                  <div class="card-price">
+                      19 999р.
+                  </div>
+                  <div class="card-button">
+                      в корзину
+                  </div>
+              </div>
+              <div class="product-card">
+                  <img class="card-image" src="{{ asset('/img/slider/slide2.jpg') }}" alt="">
+                  <div class="card-title">
+                      Сварочный аппарат ТПИ-12345
+                  </div>
+                  <div class="card-price">
+                      19 999р.
+                  </div>
+                  <div class="card-button">
+                      в корзину
+                  </div>
+              </div>
+              <div class="product-card">
+                  <img class="card-image" src="{{ asset('/img/slider/slide1.jpg') }}" alt="">
+                  <div class="card-title">
+                      Сварочный аппарат ТПИ-12345
+                  </div>
+                  <div class="card-price">
+                      19 999р.
+                  </div>
+                  <div class="card-button">
+                      в корзину
+                  </div>
+              </div>
+              <div class="product-card">
+                  <img class="card-image" src="{{ asset('/img/slider/slide2.jpg') }}" alt="">
+                  <div class="card-title">
+                      Сварочный аппарат ТПИ-12345
+                  </div>
+                  <div class="card-price">
+                      19 999р.
+                  </div>
+                  <div class="card-button">
+                      в корзину
+                  </div>
+              </div>
+          </div>
+      </div>
     </div>
 @endsection
 

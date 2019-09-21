@@ -1,26 +1,110 @@
-.products-section {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    margin: 80px auto 80px;
+.catalog-page {
+    overflow: hidden;
+    position: relative;
+    font-size: 24px;
+    font-weight: 600;
+}
 
-    .sidebar li.active {
-        font-weight: 500;
+.side-bar {
+    box-sizing: border-box;
+    height: 100%;
+    position: fixed;
+    padding: 15px 25px;
+    width: 350px;
+}
+
+.categories-list-item {
+    cursor: pointer;
+    margin: 10px 0;
+    
+    &.active {
+        text-decoration: underline;
     }
 
-    .products {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 60px 30px;
+    &.actions {
+        color: #ff0000;
+    }
+}
 
-        .product-price {
-          color: #000;
+.products-container {
+    box-shadow: -10px -5px 15px -10px rgba(0, 0, 0, 0.55);
+    margin-left: 350px;
+    padding: 25px;
+}
+
+.sort-menu {
+    background-color: $c-light-gray-1;
+    color: $c-white;
+    padding: 15px;
+}
+
+.sort-menu-list {
+    display: flex;
+    justify-content: flex-start;
+
+    &-item {
+        cursor: pointer;
+        margin-right: 15px;
+
+        &.active {
+            text-decoration: underline;
         }
     }
 }
 
-.products-header {
+.product-cards {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
+.product-card {
+    background-color: $c-white;
+    box-shadow: 0 0 25px -1px $c-product-card-shadow;
+    box-sizing: border-box;
+    cursor: pointer;
+    flex-basis: 30%;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    transition: transform .3s ease;
 
+    &:hover {
+        transform: scale(1.1);
+        transition: transform .3s ease;
+
+        .card-price {
+            color: $c-product-title-hover;
+        }
+    }
+
+    .card-title,
+    .card-price {
+        margin: 5px;
+    }
+
+    .card-price {
+        font-size: 36px;
+    }
+
+    .card-button {
+        border-radius: 10px;
+        border: 2px solid $c-product-buy-btn-border;
+        color: $c-product-buy-btn-text;
+        font-size: 26px;
+        text-align: center;
+        width: 175px;
+        margin: 15px auto 15px;
+        transition: color .1s ease;
+        text-transform: uppercase;
+
+        &:hover {
+            transition: color .1s ease;
+            color: $c-product-buy-btn-text-hover;
+            border-color: $c-product-buy-btn-border-hover;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+}

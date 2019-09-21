@@ -1,0 +1,81 @@
+.modal {
+  display: none;
+  font-family: 'Poiret One', cursive;
+  font-size: 26px;
+  font-weight: 900;
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $c-modal-overlay-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  &__container {
+    background-color: $c-modal-container-bg;
+    padding: 30px;
+    max-width: 500px;
+    max-height: 100vh;
+    border-radius: 4px;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.25;
+    color: $c-modal-title;
+    box-sizing: border-box;
+  }
+
+  &__content {
+    margin-bottom: 35px;
+    line-height: 1.5;
+  }
+
+  &__btn {
+    font-size: 16px;
+    padding: 5px 10px;
+    background-color: $c-modal-btn-bg;
+    border-radius: .25rem;
+    border: 0;
+    cursor: pointer;
+    -webkit-appearance: button;
+    text-transform: none;
+    overflow: visible;
+    line-height: 1.15;
+    margin: 0;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: transform .25s ease-out;
+
+    &:focus,
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__btn-primary {
+    background-color: $c-modal-btn-primary-bg;
+    color: $c-modal-btn-primary-text;
+  }
+
+  &.is-open {
+    display: block;
+  }
+}

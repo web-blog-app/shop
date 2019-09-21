@@ -10,6 +10,25 @@ body {
     font-family: 'Poiret One', cursive;
 }
 
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer-container {
+    flex: 0 0 auto;
+}
+
 .container {
     margin: 0 auto;
     padding: 0 15px;
@@ -33,5 +52,40 @@ body {
 
     @media (max-width: $screen-sm-max) {
         font-size: 24px;
+    }
+}
+
+.form-success-msg {
+    display: none;
+}
+
+
+.form-group {
+    .form-label {
+        display: block;
+    }
+
+    .form-input {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 5px;
+        outline: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px solid $c-form-input-border;
+        margin-bottom: 10px;
+        font-size: 26px;
+    }
+}
+
+.form-error {
+    color: $c-form-error;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity .3s ease;
+
+    &.active {
+        opacity: 1;
     }
 }

@@ -21,6 +21,7 @@ $c-light-gray: #eeeeee;
 $c-light-gray-1: #535353;
 $c-light-gray-2: #d4cdcd;
 $c-blue: #00aeef;
+$c-blue-1: #00449e;
 $c-blue-2: #6c9acc;
 $c-light-blue: #f4f9fd;
 $c-red: #ff0000;
@@ -75,3 +76,15 @@ $c-advantages-border: $c-light-gray-2;
 // About page
 $c-paragraphs-bg-even: $c-light-blue;
 $c-links-color: $c-red;
+
+// Modal
+$c-modal-overlay-bg: rgba($c-black, .6);
+$c-modal-container-bg: $c-white;
+$c-modal-title: $c-blue-1;
+$c-modal-btn-bg: $c-light-gray;
+$c-modal-btn-primary-bg: $c-blue-1;
+$c-modal-btn-primary-text: $c-light-gray;
+
+// Form
+$c-form-input-border: $c-black;
+$c-form-error: $c-red;

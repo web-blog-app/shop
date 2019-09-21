@@ -29,6 +29,10 @@
       <i class="fas fa-cart-plus"></i>
       <span>Тележка</span>
     </div>
+    <ul class="menu-list">
+      <li><a href="/contact/">Контакты</a></li>
+      <li><a href="/about/">О нас</a></li>
+    </ul>
     <div class="header-contacts">
       <a class="phone" href="/">+7 951 132-15-25</a>
       <a class="email" href="/">beru@beru.ru</a>
