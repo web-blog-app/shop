@@ -6,32 +6,52 @@
       </div>
     </div>
     <div class="mobile-menu-content">
-      <form class="search" onsubmit="return false;">
-        <input type="search" placeholder="Найти...">
+      <form class="search"  action="{{ route('search') }}" method="GET">      
+        <input type="search" name="query" id="query" value="{{ request()->input('query') }}" class="search-box" placeholder="Найти..." required>
+      {{ csrf_field() }}
       </form>
       <ul class="mobile-menu-list">
-        <li><a href="/">Главная</a></li>
-        <li><a href="/catalog/">Каталог</a></li>
-        <li><a href="/contact/">Контакты</a></li>
-        <li><a href="/about/">О нас</a></li>
+        <li><a href="{{ route('landing-page') }}">Главная</a></li>
+        <li><a href="{{ route('shop.index') }}">Каталог</a></li> 
+        <li><a href="{{ route('contact') }}">Контакты</a></li>
+        <li><a href="{{ route('about') }}">О нас</a></li>
       </ul>
     </div>
   </div>
   <div class="header-top">
-    <a href="/" class="header-logo"> <span class="minimaze">Компания</span> А<span>2</span></a>
-    <form class="search" onsubmit="return false;">
-      <input type="search" placeholder="Найти...">
+    <a href="{{ route('landing-page') }}" class="header-logo"> <span class="minimaze">Компания</span> А<span>2</span></a>
+    <form class="search"  action="{{ route('search') }}" method="GET">      
+      <input type="search" name="query" id="query" value="{{ request()->input('query') }}" class="search-box" placeholder="Найти..." required>
+      {{ csrf_field() }}
     </form>
-    <div class="account">
-      <a href="/account">Личный Кабинет</a>
-    </div>
+    <ul class="account">
+       @guest
+          <li><a href="{{ route('login') }}">Вход</a>/<a href="{{ route('register') }}">Регистрация</a></li>          
+       @else
+          <li><a href="{{ route('users.edit') }}">Мой аккаунт</a>    </li>
+          <li>
+            <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+              <i class="fas fa-sign-out-alt"></i>
+              Выход
+            </a>
+          </li>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            {{ csrf_field() }}
+          </form>
+       @endguest
+    </ul>
     <div class="cart">
+      <a  href="{{ route('cart.index') }}"> 
+        @if (Cart::instance('default')->count() > 0)
+        <span class="cart-count"><span>{{ Cart::instance('default')->count() }}</span></span>
+        @endif
       <i class="fas fa-cart-plus"></i>
       <span>Тележка</span>
+      </a>      
     </div>
     <ul class="menu-list">
-      <li><a href="/contact/">Контакты</a></li>
-      <li><a href="/about/">О нас</a></li>
+      <li><a href="{{ route('contact') }}">Контакты</a></li>
+      <li><a href="{{ route('about') }}">О нас</a></li>
     </ul>
     <div class="header-contacts">
       <a class="phone" href="/">+7 951 132-15-25</a>
@@ -46,7 +66,7 @@
   <div class="header-bottom">
     <ul class="menu">
       <li class="actions"><a href="/catalog/actions">Акции</a></li>
-      <li><a href="/catalog">Каталог</a></li>
+      <li><a href="{{ route('shop.index') }}">Каталог</a></li>
       <li><a href="/catalog">Сварочные аппараты</a></li>
       <li><a href="/catalog">Инструмент</a></li>
       <li><a href="/catalog">Сад и Дача</a></li>

@@ -152,7 +152,7 @@
                 </div>
             </div>
             <div class="catalog-button">
-                Перейти в каталог
+                <a href="{{ route('shop.index') }}">Перейти в каталог</a>                
             </div>
         </div>
         <div class="map container">

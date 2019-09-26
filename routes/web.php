@@ -1,6 +1,8 @@
 <?php
 
 Route::get('/', 'LandingPageController@index')->name('landing-page');
+Route::get('/about', 'AboutController@index')->name('about');
+Route::get('/contact', 'ContactController@index')->name('contact');
 
 Route::get('/shop', 'ShopController@index')->name('shop.index');
 Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');

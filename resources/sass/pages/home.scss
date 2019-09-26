@@ -145,15 +145,16 @@
 
 .main-catalog {
     .catalog-button {
-        font-size: 25px;
-        padding: 15px 25px;
+        font-size: 32px;
+        padding: 25px;
         border-radius: 5px;
         font-weight: 900;
-        max-width: 205px;
+        max-width: 305px;
         margin: 35px auto 0;
         cursor: pointer;
         box-shadow: 0 0 25px -1px rgba(0,0,0, .7);
         transition: background-color .5s ease, box-shadow .5s ease, color .5s ease;
+        text-align: center;
 
         &:hover {
             background-color: $c-main-catalog-button-bg-hover;
