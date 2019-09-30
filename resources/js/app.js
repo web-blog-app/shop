@@ -93,4 +93,26 @@ $(document).ready(function(){
       }).mask(this);
     }
   });
+
+  $('.product-section-thumbnail').on('click', function(e) {
+    e.preventDefault();
+    const mainProductImage = $('.product-section-image').find('img');
+    const selectedItem = $(this);
+    const selectedSrc = selectedItem.find('img').attr('src');
+
+    mainProductImage.attr('src', selectedSrc);
+    $('.product-section-thumbnail').removeClass('selected');
+    selectedItem.addClass('selected');
+  });
+
+  $('ul.tabs li').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('ul.tabs li').removeClass('current');
+    $('.tab-content').removeClass('current');
+
+    $(this).addClass('current');
+    $("#"+tab_id).addClass('current');
+  })
+
 });

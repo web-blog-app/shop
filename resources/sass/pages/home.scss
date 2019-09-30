@@ -145,6 +145,7 @@
 
 .main-catalog {
     .catalog-button {
+        display: block;
         font-size: 32px;
         padding: 25px;
         border-radius: 5px;
@@ -165,18 +166,33 @@
 
     .main-product-list {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         flex-wrap: wrap;
     }
 
-    .product {
-        min-width: 380px;
-        margin: 40px;
+    .main-product-card-container {
         box-sizing: border-box;
+        flex-basis: 24.5%;
+        padding: 15px;
+        z-index: 3;
+
+        &:nth-child(2) {
+            z-index: 2;
+        }
+
+        &:nth-child(3) {
+            z-index: 1;
+        }
+
+        &:nth-child(4) {
+            z-index: 0;
+        }
+    }
+
+    .product {
         background-color: $c-product-card-bg;
         cursor: pointer;
-        flex-basis: 18%;
         box-shadow: 0 0 25px -1px $c-product-card-shadow;
         display: flex;
         flex-direction: column;
@@ -184,13 +200,10 @@
         font-weight: 800;
         padding: 15px;
         min-height: 625px;
+        min-width: 280px;
+        max-height: 655px;
         transition: transform .3s ease;
         position: relative;
-        z-index: 1;
-
-        @media (max-width: $screen-xs-max) {
-            min-width: 280px;
-        }
 
         &:hover {
             transform: scale(1.1);

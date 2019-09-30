@@ -77,83 +77,91 @@
                 Мы рекомендуем обратить внимание.
             </div>
             <div class="main-product-list">
-                <div class="product">
-                    <div class="product-title">
-                        Solaris MIG-205
-                    </div>
-                    <img src="{{ asset('/img/slider/slide1.jpg') }}" alt="">
-                    <div class="product-description">
-                        Полуавтомат сварочный Solaris MIG-205 (MIG/MAG/FLUX/MMA)
-                        <span class="warning">
-                            Имеет три режима сварки!
-                        </span>
-                    </div>
-                    <div class="product-price">
-                        16250 руб.
-                    </div>
-                    <div class="product-button">
-                        Купить
+                <div class="main-product-card-container">
+                    <div class="product">
+                        <div class="product-title">
+                            Solaris MIG-205
+                        </div>
+                        <img src="{{ asset('/img/slider/slide1.jpg') }}" alt="">
+                        <div class="product-description">
+                            Полуавтомат сварочный Solaris MIG-205 (MIG/MAG/FLUX/MMA)
+                            <span class="warning">
+                                Имеет три режима сварки!
+                            </span>
+                        </div>
+                        <div class="product-price">
+                            16250 руб.
+                        </div>
+                        <div class="product-button">
+                            Купить
+                        </div>
                     </div>
                 </div>
-                <div class="product">
-                    <div class="product-title">
-                        Solaris MIG-205
-                    </div>
-                    <img src="{{ asset('/img/slider/slide2.jpg') }}" alt="">
-                    <div class="product-description">
-                        Полуавтомат сварочный Solaris TOPMIG-225
-                        <br>
-                        <span class="warning">
-                            Постовляется в комплекте со сварщиком!
-                        </span>
-                    </div>
-                    <div class="product-price">
-                        17000 руб.
-                    </div>
-                    <div class="product-button">
-                        Купить
-                    </div>
+                <div class="main-product-card-container">
+                    <div class="product">
+                        <div class="product-title">
+                            Solaris MIG-205
+                        </div>
+                        <img src="{{ asset('/img/slider/slide2.jpg') }}" alt="">
+                        <div class="product-description">
+                            Полуавтомат сварочный Solaris TOPMIG-225
+                            <br>
+                            <span class="warning">
+                                Постовляется в комплекте со сварщиком!
+                            </span>
+                        </div>
+                        <div class="product-price">
+                            17000 руб.
+                        </div>
+                        <div class="product-button">
+                            Купить
+                        </div>
 
-                    <div class="wave">-50%</div>
-                </div>
-                <div class="product">
-                    <div class="product-title">
-                        Solaris MIG-205
-                    </div>
-                    <img src="{{ asset('/img/slider/slider1.png') }}" alt="">
-                    <div class="product-description">
-                        Полуавтомат сварочный Solaris MIG-29
-                        <br>
-                        <span class="attention">
-                            Акция до конца сентября!
-                        </span>
-                    </div>
-                    <div class="product-price">
-                        17500 руб.
-                    </div>
-                    <div class="product-button">
-                        Купить
+                        <div class="wave">-50%</div>
                     </div>
                 </div>
-                <div class="product">
-                    <div class="product-title">
-                        Solaris MIG-31
+                <div class="main-product-card-container">
+                    <div class="product">
+                        <div class="product-title">
+                            Solaris MIG-205
+                        </div>
+                        <img src="{{ asset('/img/slider/slider1.png') }}" alt="">
+                        <div class="product-description">
+                            Полуавтомат сварочный Solaris MIG-29
+                            <br>
+                            <span class="attention">
+                                Акция до конца сентября!
+                            </span>
+                        </div>
+                        <div class="product-price">
+                            17500 руб.
+                        </div>
+                        <div class="product-button">
+                            Купить
+                        </div>
                     </div>
-                    <img src="{{ asset('/img/slider/slider2.png') }}" alt="">
-                    <div class="product-description">
-                        Полуавтомат сварочный Solaris MIG-205 (MIG/MAG/FLUX/MMA)
-                    </div>
-                    <div class="product-price">
-                        16250 руб.
-                    </div>
-                    <div class="product-button">
-                        Купить
+                </div>
+                <div class="main-product-card-container">
+                    <div class="product">
+                        <div class="product-title">
+                            Solaris MIG-31
+                        </div>
+                        <img src="{{ asset('/img/slider/slider2.png') }}" alt="">
+                        <div class="product-description">
+                            Полуавтомат сварочный Solaris MIG-205 (MIG/MAG/FLUX/MMA)
+                        </div>
+                        <div class="product-price">
+                            16250 руб.
+                        </div>
+                        <div class="product-button">
+                            Купить
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="catalog-button">
-                <a href="{{ route('shop.index') }}">Перейти в каталог</a>                
-            </div>
+            <a href="{{ route('shop.index') }}" class="catalog-button">
+                Перейти в каталог
+            </a>
         </div>
         <div class="map container">
             <div class="map-title title">

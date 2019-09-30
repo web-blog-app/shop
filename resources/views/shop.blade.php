@@ -4,23 +4,26 @@
 
 
 @section('content')
-    <div class="catalog-page">
+    <div class="catalog-page common-catalog-page">
       <div class="side-bar">
+          <div class="categories-title">
+              Категории
+          </div>
           <ul class="categories-list">
-              <li class="categories-list-item actions">Акции!</li>
-              <li class="categories-list-item active">Сварочные аппараты</li>
-              <li class="categories-list-item">Инструменты</li>
-              <li class="categories-list-item">Сад и огород</li>
-              <li class="categories-list-item">Сервис</li>
+              <li class="categories-list-item actions"><a href="#">Акции!</a></li>
+              <li class="categories-list-item active"><a href="#">Сварочные аппараты</a></li>
+              <li class="categories-list-item"><a href="#">Инструменты</a></li>
+              <li class="categories-list-item"><a href="#">Сад и огород</a></li>
+              <li class="categories-list-item"><a href="#">Сервис</a></li>
           </ul>
       </div>
 
-      <div class="products-container">
+      <div class="products-section">
           <div class="sort-menu">
               <ul class="sort-menu-list">
-                  <li class="sort-menu-list-item">Сначала Акции</li>
-                  <li class="sort-menu-list-item active">Сначала дешёвые</li>
-                  <li class="sort-menu-list-item">Сначала дорогие</li>
+                  <li class="sort-menu-list-item"><a href="#">Сначала Акции</a></li>
+                  <li class="sort-menu-list-item active"><a href="#">Сначала дешёвые</a></li>
+                  <li class="sort-menu-list-item"><a href="#">Сначала дорогие</a></li>
               </ul>
           </div>
           <div class="product-cards">
