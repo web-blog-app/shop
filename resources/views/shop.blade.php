@@ -26,8 +26,7 @@
           <div class="categories-title">
               Категории
           </div>
-          <ul class="categories-list">
-            <li class="categories-list-item actions"><a href="#">Акции!</a></li>
+          <ul class="categories-list">            
             @foreach ($categories as $category)              
               <li class="categories-list-item ">
                 <a href="{{ route('shop.index', ['category' => $category->slug]) }}">{{ $category->name }}</a>
@@ -52,9 +51,11 @@
           <div class="product-cards">
               @forelse ($products as $product)
               <div class="product-card">
-                 <a href="{{ route('shop.show', $product->slug) }}">
-                  <img class="card-image" src="{{ productImage($product->image) }}" alt="">
-                </a>
+                 <a href="{{ route('shop.show', $product->slug) }}">                 
+                  
+                  <img class="card-image" src=" {{ productImage($product->image) }} " alt="">
+                  
+                </a>                
                   <div class="card-title">
                       <a href="{{ route('shop.show', $product->slug) }}">
                       {{ $product->name }}

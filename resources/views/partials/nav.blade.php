@@ -65,11 +65,11 @@
   </div>
   <div class="header-bottom">
     <ul class="menu">
-      <li class="actions"><a href="/catalog/actions">Акции</a></li>
+      <li class="actions"><a href="{{ route('shop.index', ['category' => 'action']) }}">Акции</a></li>
       <li><a href="{{ route('shop.index') }}">Каталог</a></li>
-      <li><a href="/catalog">Сварочные аппараты</a></li>
-      <li><a href="/catalog">Инструмент</a></li>
-      <li><a href="/catalog">Сад и Дача</a></li>
+      <li><a href="{{ route('shop.index', ['category' => 'svarka']) }}">Сварочные аппараты</a></li>
+      <li><a href="{{ route('shop.index', ['category' => 'instruments']) }}">Инструмент</a></li>
+      <li><a href="{{ route('shop.index', ['category' => 'sad']) }}">Сад и Дача</a></li>
     </ul>
   </div>
 </header>

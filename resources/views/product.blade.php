@@ -28,8 +28,7 @@
             <div class="categories-title">
                 Категории
             </div>
-            <ul class="categories-list">
-                <li class="categories-list-item actions"><a href="#">Акции!</a></li>
+            <ul class="categories-list">                
             @foreach ($categories as $category)              
               <li class="categories-list-item ">
                 <a href="{{ route('shop.index', ['category' => $category->slug]) }}">{{ $category->name }}</a>
@@ -77,7 +76,7 @@
                         <li class="tab-link" data-tab="tab-2">Доставка по РФ</li>
                     </ul>
                     <div id="tab-1" class="tab-content current">
-                      {{ $product->description }}                        
+                      {!! $product->description !!}                        
                     </div>
                     <div id="tab-2" class="tab-content">
                         Отправка заказов в регионы России осуществляется рядом транспортных компаний. Доставка в регионы оплачивается покупателем в соответствии с тарифами компании, осуществляющей перевозку. Доставка оплачивается покупателем при получении груза в транспортной компании.
