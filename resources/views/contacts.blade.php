@@ -53,10 +53,10 @@
                     <div class="address">
                         Санкт-Петербург ул. Любых Инструметов д.1 пом.1
                     </div>
-                    <div class="phone" data-micromodal-trigger="modal-call">
+                    <div class="phone">
                         + 7 (965) 123-12-12
                     </div>
-                    <div class="recall-form-button">
+                    <div class="recall-form-button" data-micromodal-trigger="modal-call">
                         заказать звонок
                     </div>
                 </div>

@@ -42,6 +42,10 @@
     &.actions {
         color: #ff0000;
     }
+
+    a {
+        display: block;
+    }
 }
 
 .products-section {
@@ -88,7 +92,6 @@
     cursor: pointer;
     flex-basis: 22%;
     margin: 15px;
-    padding: 15px;
     text-align: center;
     transition: transform .3s ease;
 
@@ -101,23 +104,29 @@
         }
     }
 
+    .product-link {
+        display: block;
+        padding: 15px;
+    }
+
     .card-title,
     .card-price {
         margin: 5px;
     }
 
     .card-price {
-        font-size: 36px;
+        font-size: 28px;
     }
 
     .card-button {
         border-radius: 10px;
         border: 2px solid $c-product-buy-btn-border;
         color: $c-product-buy-btn-text;
-        font-size: 26px;
+        font-size: 19px;
         text-align: center;
         width: 175px;
         margin: 15px auto 15px;
+        padding: 5px;
         transition: color .1s ease;
         text-transform: uppercase;
 
@@ -125,6 +134,24 @@
             transition: color .1s ease;
             color: $c-product-buy-btn-text-hover;
             border-color: $c-product-buy-btn-border-hover;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+        }
+
+        .button {
+            background: none;
+            border: 0;
+            color: inherit;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            margin: 0;
+            outline: none;
+            padding: 0;
         }
     }
 

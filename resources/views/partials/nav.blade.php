@@ -45,8 +45,8 @@
         @if (Cart::instance('default')->count() > 0)
         <span class="cart-count"><span>{{ Cart::instance('default')->count() }}</span></span>
         @endif
-      <i class="fas fa-cart-plus"></i>
-      <span>Тележка</span>
+      <i class="fas fa-cart-plus cart-icon"></i>
+      <span class="cart-title">Тележка</span>
       </a>      
     </div>
     <ul class="menu-list">

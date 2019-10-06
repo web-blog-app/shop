@@ -130,11 +130,30 @@
     }
 
     &:hover {
-      i, span {
+      .cart-icon, .cart-title {
         cursor: pointer;
         color: $c-header-important-text;
         transition: color .1s ease;
       }
+      
+      .cart-count {
+        background-color: $c-cart-count-bg-hover;
+        border-color: $c-cart-count-border-hover;
+        color: $c-cart-count-text-hover;
+      }
+    }
+
+    .cart-count {
+      background-color: $c-cart-count-bg;
+      border: 2px solid $c-cart-count-border;
+      border-radius: 50%;
+      box-sizing: border-box;
+      color: $c-cart-count-text;
+      font-size: 16px;
+      padding: 0 5px;
+      position: absolute;
+      right: 10px;
+      top: -10px;
     }
 
     i {

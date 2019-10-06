@@ -13,7 +13,8 @@
 .product-section-image {
   img {
     height: auto;
-    object-fit: cover;
+    max-height: 350px;
+    object-fit: contain;
     width: 100%;
   }
 }
@@ -21,6 +22,7 @@
 .product-section-images {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 25px;
   width: 100%;
 }
@@ -30,15 +32,20 @@
   box-sizing: border-box;
   cursor: pointer;
   flex-basis: 20%;
+  height: 100px;
   margin-right: -2px;
   margin-left: -2px;
+  overflow: hidden;
+  width: 100px;
 
   &.selected {
     border-color: #38a3fd;
   }
 
   img {
-    object-fit: cover;
+    height: auto;
+    max-height: 100px;
+    object-fit: contain;
     width: 100%;
   }
 }

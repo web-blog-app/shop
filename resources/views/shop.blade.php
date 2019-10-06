@@ -51,25 +51,21 @@
           <div class="product-cards">
               @forelse ($products as $product)
               <div class="product-card">
-                 <a href="{{ route('shop.show', $product->slug) }}">                 
-                  
-                  <img class="card-image" src=" {{ productImage($product->image) }} " alt="">
-                  
-                </a>                
-                  <div class="card-title">
-                      <a href="{{ route('shop.show', $product->slug) }}">
-                      {{ $product->name }}
-                      </a>
-                  </div>
-                  <div class="card-price">
-                      {{ $product->presentPrice() }}
-                  </div>
-                  <div class="card-button">
-                    <form action="{{ route('cart.store', $product) }}" method="POST">
-                      {{ csrf_field() }}
-                      <button type="submit" class="button button-plain">Добавить в корзину</button>
-                    </form>
-                  </div>
+                  <a href="{{ route('shop.show', $product->slug) }}" class="product-link">
+                      <img class="card-image" src=" {{ productImage($product->image) }} " alt="">
+                      <div class="card-title">
+                          {{ $product->name }}
+                      </div>
+                      <div class="card-price">
+                          {{ $product->presentPrice() }}
+                      </div>
+                      <div class="card-button">
+                        <form action="{{ route('cart.store', $product) }}" method="POST">
+                          {{ csrf_field() }}
+                          <button type="submit" class="button button-plain">Добавить в корзину</button>
+                        </form>
+                      </div>
+                  </a>
               </div>
               @empty
                     <div style="text-align: left">Ничего не найдено</div>

@@ -66,7 +66,7 @@
                     @if ($product->quantity > 0)
                     <form action="{{ route('cart.store', $product) }}" method="POST">
                       {{ csrf_field() }}
-                      <button type="submit" class="button button-plain">Добавить в корзину</button>
+                      <button type="submit" class="button product-section-button">Добавить в корзину</button>
                     </form>
                     @endif
                 </div>

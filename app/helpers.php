@@ -19,7 +19,7 @@ function setActiveCategory($category, $output = 'active')
 
 function productImage($path)
 {
-    return  'http://localhost/shop/storage/app/public/'.$path ;
+    return  'http://shop/storage/app/public/'.$path ;
 }
 
 function getNumbers()
