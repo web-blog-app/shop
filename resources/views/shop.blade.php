@@ -59,7 +59,7 @@
                       <div class="card-price">
                           {{ $product->presentPrice() }}
                       </div>
-                      <div class="card-button">
+                      <div class="cart-button">
                         <form action="{{ route('cart.store', $product) }}" method="POST">
                           {{ csrf_field() }}
                           <button type="submit" class="button button-plain">Добавить в корзину</button>

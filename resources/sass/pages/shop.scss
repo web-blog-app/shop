@@ -118,44 +118,44 @@
         font-size: 28px;
     }
 
-    .card-button {
-        border-radius: 10px;
-        border: 2px solid $c-product-buy-btn-border;
-        color: $c-product-buy-btn-text;
-        font-size: 19px;
-        text-align: center;
-        width: 175px;
-        margin: 15px auto 15px;
-        padding: 5px;
-        transition: color .1s ease;
-        text-transform: uppercase;
-
-        &:hover {
-            transition: color .1s ease;
-            color: $c-product-buy-btn-text-hover;
-            border-color: $c-product-buy-btn-border-hover;
-        }
-
-        form {
-            display: flex;
-            justify-content: center;
-        }
-
-        .button {
-            background: none;
-            border: 0;
-            color: inherit;
-            cursor: pointer;
-            font-family: inherit;
-            font-size: inherit;
-            font-weight: inherit;
-            margin: 0;
-            outline: none;
-            padding: 0;
-        }
-    }
-
     img {
         width: 100%;
+    }
+}
+
+.cart-button {
+    border-radius: 10px;
+    border: 2px solid $c-product-buy-btn-border;
+    color: $c-product-buy-btn-text;
+    font-size: 19px;
+    text-align: center;
+    width: 175px;
+    margin: 15px auto 15px;
+    padding: 5px;
+    transition: color .1s ease;
+    text-transform: uppercase;
+
+    &:hover {
+        transition: color .1s ease;
+        color: $c-product-buy-btn-text-hover;
+        border-color: $c-product-buy-btn-border-hover;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+    }
+
+    .button {
+        background: none;
+        border: 0;
+        color: inherit;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        margin: 0;
+        outline: none;
+        padding: 0;
     }
 }

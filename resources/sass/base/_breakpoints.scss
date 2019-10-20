@@ -25,10 +25,15 @@ $screen-md-min:              $screen-md;
 $screen-lg:                  1280px;
 $screen-lg-min:              $screen-lg;
 
+//  04. Macbook desktop
+$screen-xl:                  1440px;
+$screen-xl-min:              $screen-xl;
+
 //  05. So media queries don't overlap when required, provide a maximum
 $screen-xs-max:              ($screen-sm-min - 1);
 $screen-sm-max:              ($screen-md-min - 1);
 $screen-md-max:              ($screen-lg-min - 1);
+$screen-lg-max:              ($screen-xl-min - 1);
 
 //  06. Additional media queries
 $screen-sxs:                 375px;

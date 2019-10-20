@@ -30,6 +30,7 @@ $c-purple: #740080;
 
 // Header
 $c-header-bg: $c-white;
+$c-header-bottom-bg: $c-light-gray;
 $c-header-shadow: rgba($c-black, .55);
 $c-header-text: $c-grey;
 $c-header-logo-text: $c-blue;
@@ -94,3 +95,7 @@ $c-modal-btn-primary-text: $c-light-gray;
 // Form
 $c-form-input-border: $c-black;
 $c-form-error: $c-red;
+
+// CART
+$c-promo-btn-text: $c-blue-2;
+$c-promo-btn-text-hover: $c-red;

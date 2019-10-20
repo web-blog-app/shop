@@ -144,17 +144,21 @@
 }
 
 .main-catalog {
+    overflow: hidden;
+    padding-bottom: 25px;
+
     .catalog-button {
         display: block;
-        font-size: 32px;
+        font-size: 36px;
         padding: 25px;
         border-radius: 5px;
         font-weight: 900;
-        max-width: 305px;
+        max-width: 550px;
         margin: 35px auto 0;
         cursor: pointer;
         box-shadow: 0 0 25px -1px rgba(0,0,0, .7);
         transition: background-color .5s ease, box-shadow .5s ease, color .5s ease;
+        text-transform: uppercase;
         text-align: center;
 
         &:hover {
@@ -176,6 +180,14 @@
         flex-basis: 24.5%;
         padding: 15px;
         z-index: 3;
+
+        @media (max-width: $screen-lg-max) {
+            flex-basis: 35%;
+        }
+
+        @media (max-width: $screen-xs-max) {
+            flex-basis: 95%;
+        }
 
         &:nth-child(2) {
             z-index: 2;

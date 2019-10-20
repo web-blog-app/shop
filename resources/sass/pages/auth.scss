@@ -1,9 +1,8 @@
 .auth-pages {
     margin: 100px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 100px;
-    min-height: 60vh;
+    max-width: 550px;
+    font-weight: bolder;
+    font-size: 26px;
 
     input {
         border: 1px solid $text-color-light;
@@ -26,9 +25,11 @@
 
     .auth-button {
         background: $text-color;
+        cursor: pointer;
         color: $white;
         border-radius: 5px;
         padding: 12px 50px;
+        outline: none;
 
         &:hover {
             background: lighten($text-color, 10%);

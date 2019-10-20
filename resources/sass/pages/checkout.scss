@@ -5,12 +5,19 @@ h1.checkout-heading {
 .checkout-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  // grid-column-gap: 10px;
+   //grid-column-gap: 10px;
   grid-gap: 30px;
   margin: 40px auto 80px;
+  font-weight: 900;
+  padding: 0 45px;
 
   .checkout-table-container {
-    margin-left: 124px;
+    font-size: 24px;
+    max-width: 80%;
+
+    .checkout-totals-total {
+      color: red;
+    }
   }
 
   h2 {
@@ -79,31 +86,31 @@ h1.checkout-heading {
       line-height: 2.2;
     }
   }
-}
 
+  .form-group {
+    margin-bottom: 10px;
 
+    label {
+      display: block;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
 
-/**
-* The CSS shown here will not be introduced in the Quickstart guide, but shows
-* how you can use CSS to style your Element's container.
-*/
-.StripeElement {
-  background-color: white;
-  padding: 16px 16px;
-  border: 1px solid #ccc;
+    input {
+      border: 1px solid #919191;
+      padding: 16px 10px;
+      border-radius: 5px;
+      width: 66.6%;
+      font-size: 14px;
+    }
+  }
 
-}
-
-.StripeElement--focus {
-  // box-shadow: 0 1px 3px 0 #cfd7df;
-}
-
-.StripeElement--invalid {
-  border-color: #fa755a;
-}
-
-.StripeElement--webkit-autofill {
-  background-color: #fefde5 !important;
+  .cart-button {
+    background-color: transparent;
+    cursor: pointer;
+    min-width: 260px;
+    padding: 14px 10px;
+  }
 }
 
 #card-errors {

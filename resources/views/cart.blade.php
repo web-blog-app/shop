@@ -7,13 +7,6 @@
 @endsection
 
 @section('content')
-
-    @component('components.breadcrumbs')
-        <a href="#">Домашняя</a>
-        <i class="fa fa-chevron-right breadcrumb-separator"></i>
-        <span>Корзина</span>
-    @endcomponent
-
     <div class="cart-section container">
         <div>
             @if (session()->has('success_message'))
@@ -61,14 +54,14 @@
                                 <button type="submit" class="cart-options">Сохранить на потом</button>
                             </form>
                         </div>
-                        <div>
+                        <div class="cart-quantity-container">
                             <select class="quantity" data-id="{{ $item->rowId }}" data-productQuantity="{{ $item->model->quantity }}">
                                 @for ($i = 1; $i < 5 + 1 ; $i++)
                                     <option {{ $item->qty == $i ? 'selected' : '' }}>{{ $i }}</option>
                                 @endfor
                             </select>
                         </div>
-                        <div>{{ presentPrice($item->subtotal) }}</div>
+                        <div class="cart-price">{{ presentPrice($item->subtotal) }}</div>
                     </div>
                 </div> <!-- end cart-table-row -->
                 @endforeach
@@ -90,7 +83,7 @@
 
             <div class="cart-totals">
                 <div class="cart-totals-left">
-                    Доставка бесплатная, потому что мы такие классные.
+                    <span class="promo-text">Доставка бесплатная</span>, потому что мы такие классные.
                 </div>
 
                 <div class="cart-totals-right">
@@ -123,8 +116,8 @@
             </div> <!-- end cart-totals -->
 
             <div class="cart-buttons">
-                <a href="{{ route('shop.index') }}" class="button">Продолжить покупки</a>
-                <a href="{{ route('checkout.index') }}" class="button-primary">Оформить заказ</a>
+                <a href="{{ route('shop.index') }}" class="button button-secondary">Продолжить покупки</a>
+                <a href="{{ route('checkout.index') }}" class="button-primary cart-button">Оформить заказ</a>
             </div>
 
             @else

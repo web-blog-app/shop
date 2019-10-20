@@ -7,13 +7,6 @@
 @endsection
 
 @section('content')
-
-    @component('components.breadcrumbs')
-        <a href="/">Домашняя</a>
-        <i class="fa fa-chevron-right breadcrumb-separator"></i>
-        <span>Мои заказы</span>
-    @endcomponent
-
     <div class="container">
         @if (session()->has('success_message'))
             <div class="alert alert-success">
@@ -32,8 +25,8 @@
         @endif
     </div>
 
-    <div class="products-section my-orders container">
-        <div class="sidebar">
+    <div class="profile-section my-orders container">
+        <div class="action-bar">
 
             <ul>
               <li><a href="{{ route('users.edit') }}">Мой профиль</a></li>
