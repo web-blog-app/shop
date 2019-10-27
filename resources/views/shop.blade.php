@@ -26,13 +26,65 @@
           <div class="categories-title">
               Категории
           </div>
-          <ul class="categories-list">            
-            @foreach ($categories as $category)              
-              <li class="categories-list-item ">
-                <a href="{{ route('shop.index', ['category' => $category->slug]) }}">{{ $category->name }}</a>
+          <ul class="categories-list">
+              <li class="categories-list-item sub-menu">
+                <a href="#weldings">
+                    Сварочные аппараты
+                </a>
+                  <ul style="display: block;">
+                      <li>
+                          <a href="#weldings">
+                              Полуавтомвтические
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#weldings">
+                              Автоматические
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#weldings">
+                              Кислородые горелки
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#weldings">
+                              Плазменные аппараты
+                          </a>
+                      </li>
+                  </ul>
               </li>
-            @endforeach
+              <li class="categories-list-item sub-menu">
+                  <a href="#cuttingWheels">
+                      Отрезные круги
+                  </a>
+                  <ul style="display: block;">
+                      <li>
+                          <a href="#cuttingWheels">
+                              Стандартные
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#cuttingWheels">
+                              Большие
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#cuttingWheels">
+                              Малые
+                          </a>
+                      </li>
+                  </ul>
+              </li>
           </ul>
+
+          {{--<ul class="categories-list">            --}}
+            {{--@foreach ($categories as $category)              --}}
+              {{--<li class="categories-list-item ">--}}
+                {{--<a href="{{ route('shop.index', ['category' => $category->slug]) }}">{{ $category->name }}</a>--}}
+              {{--</li>--}}
+            {{--@endforeach--}}
+          {{--</ul>--}}
       </div>
 
       <div class="products-section">

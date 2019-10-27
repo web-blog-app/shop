@@ -5,7 +5,7 @@
 @section('content')
 <div class="container">
     <div class="auth-pages">
-        <div>
+        <div class="auth-left">
             @if (session()->has('success_message'))
             <div class="alert alert-success">
                 {{ session()->get('success_message') }}
@@ -51,7 +51,7 @@
             <p><strong>Экономьте время сейчас.</strong></p>
             <p>Создание учетной записи позволит вам быстрее оформлять заказы, иметь легкий доступ к истории заказов и получать скидки и бонусы от нашего магазина.</p>
 
-            
+
         </div>
     </div> <!-- end auth-pages -->
 </div>
