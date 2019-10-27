@@ -9,6 +9,7 @@
   .search {
     border: 1px solid $c-header-search-border;
     position: relative;
+    width: 70%;
 
     input {
       background: transparent;
@@ -34,6 +35,57 @@
       &::placeholder {
         font-size: 32px;
         font-family: 'Poiret One', cursive;
+      }
+    }
+  }
+}
+
+.header-top-contacts {
+  align-items: center;
+  background-color: $c-header-bottom-bg;
+  border-bottom: 1px solid $c-header-border;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Ruda', sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  color: $c-header-text;
+  padding: 5px 25px;
+
+  .account {
+    @media (max-width: $screen-sm-max) {
+      display: none;
+    }
+
+    a {
+      color: $c-header-text;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+        color: $c-header-text-hover;
+      }
+    }
+  }
+
+  .menu-list {
+    @media (max-width: $screen-sm-max) {
+      display: none;
+    }
+
+    li {
+      display: inline-block;
+      padding: 5px;
+    }
+
+    a {
+      font-family: 'Ruda', sans-serif;
+      font-weight: 100;
+      color: $c-header-text;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
@@ -104,22 +156,6 @@
     }
   }
 
-  .account {
-    @media (max-width: $screen-sm-max) {
-      display: none;
-    }
-
-    a {
-      color: $c-header-text;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-        color: $c-header-text-hover;
-      }
-    }
-  }
-
   .cart {
     position: relative;
     transition: color .1s ease;
@@ -163,46 +199,6 @@
     span {
       display: block;
       padding: 5px;
-    }
-  }
-
-  .menu-list {
-    @media (max-width: $screen-sm-max) {
-      display: none;
-    }
-
-    li {
-      display: block;
-      padding: 5px 0;
-    }
-
-    a {
-      font-family: 'Ruda', sans-serif;
-      font-weight: 100;
-      color: $c-header-text;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .header-contacts {
-    @media (max-width: $screen-sm-max) {
-      display: none;
-    }
-
-    a {
-      display: block;
-      padding: 5px 0;
-      text-decoration: none;
-      color: $c-header-text;
-
-      &:hover {
-        text-decoration: underline;
-        color: $c-header-text-hover;
-      }
     }
   }
 }
