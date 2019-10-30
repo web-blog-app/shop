@@ -72,9 +72,8 @@
     <ul class="menu">
       <li class="actions"><a href="{{ route('shop.index', ['category' => 'action']) }}">Акции</a></li>
       <li><a href="{{ route('shop.index') }}">Каталог</a></li>
-      <li><a href="{{ route('shop.index', ['category' => 'svarka']) }}">Сварочные аппараты</a></li>
-      <li><a href="{{ route('shop.index', ['category' => 'instruments']) }}">Инструмент</a></li>
-      <li><a href="{{ route('shop.index', ['category' => 'sad']) }}">Сад и Дача</a></li>
+       
+      {{ menu('main', 'partials.menus.main') }}     
     </ul>
   </div>
 </header>

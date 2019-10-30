@@ -15,9 +15,10 @@ class ShopController extends Controller
      */
     public function index()
     {
-        $pagination = 9;
-        $categories = Category::all();
-        
+       $pagination = 9;
+       $categories = Category::getCategories();
+          
+
         if (request()->category) {
             $products = Product::with('categories')->whereHas('categories', function ($query) {
                 $query->where('slug', request()->category);
@@ -43,6 +44,7 @@ class ShopController extends Controller
         ]);
     }
 
+
     /**
      * Display the specified resource.
      *
@@ -51,7 +53,7 @@ class ShopController extends Controller
      */
     public function show($slug)
     {
-        $categories = Category::all();
+        $categories = Category::getCategories();
         $product = Product::where('slug', $slug)->firstOrFail();
         $mightAlsoLike = Product::where('slug', '!=', $slug)->mightAlsoLike()->get();
 

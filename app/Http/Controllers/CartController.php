@@ -40,13 +40,13 @@ class CartController extends Controller
         });
 
         if ($duplicates->isNotEmpty()) {
-            return redirect()->route('cart.index')->with('success_message', 'Item is already in your cart!');
+            return back()->with('success_message', 'Товар уже в вашей корзине!');
         }
 
         Cart::add($product->id, $product->name, 1, $product->price)
             ->associate('App\Product');
 
-        return redirect()->route('cart.index')->with('success_message', 'Товар добавлен в вашу корзину!');
+        return back()->with('success_message', 'Товар добавлен в вашу корзину!');
     }
 
     /**

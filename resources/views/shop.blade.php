@@ -5,6 +5,7 @@
 
 @section('content')
   <div class="container">
+    
         @if (session()->has('success_message'))
             <div class="alert alert-success">
                 {{ session()->get('success_message') }}
@@ -24,73 +25,24 @@
     <div class="catalog-page common-catalog-page">
       <div class="side-bar">
           <div class="categories-title">
-              Категории
+              Категории:
           </div>
           <ul class="categories-list">
+            @foreach ($categories as $category) 
               <li class="categories-list-item sub-menu">
                 <a href="#weldings">
-                    Сварочные аппараты
+                    {{ $category->name }}
                 </a>
-                  <ul style="display: block;">
-                      <li>
-                          <a href="#weldings">
-                              Полуавтомвтические
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#weldings">
-                              Автоматические
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#weldings">
-                              Кислородые горелки
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#weldings">
-                              Плазменные аппараты
-                          </a>
-                      </li>
-                  </ul>
+                  @if($category->sub->count())                  
+                   @include('partials.show', ['categories' => $category->sub])
+                  @endif
               </li>
-              <li class="categories-list-item sub-menu">
-                  <a href="#cuttingWheels">
-                      Отрезные круги
-                  </a>
-                  <ul style="display: block;">
-                      <li>
-                          <a href="#cuttingWheels">
-                              Стандартные
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#cuttingWheels">
-                              Большие
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#cuttingWheels">
-                              Малые
-                          </a>
-                      </li>
-                  </ul>
-              </li>
-          </ul>
-
-          {{--<ul class="categories-list">            --}}
-            {{--@foreach ($categories as $category)              --}}
-              {{--<li class="categories-list-item ">--}}
-                {{--<a href="{{ route('shop.index', ['category' => $category->slug]) }}">{{ $category->name }}</a>--}}
-              {{--</li>--}}
-            {{--@endforeach--}}
-          {{--</ul>--}}
+              @endforeach       
       </div>
 
       <div class="products-section">
           <div class="sort-menu">
-              <ul class="sort-menu-list">
-                  <li class="sort-menu-list-item">Сначала Акции</li>
+              <ul class="sort-menu-list">                  
                   <li class="sort-menu-list-item active">
                     <a href="{{ route('shop.index', ['category'=> request()->category, 'sort' => 'low_high']) }}">Сначала дешёвые</a> 
                   </li>

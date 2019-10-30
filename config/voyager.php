@@ -14,7 +14,7 @@ return [
         'add_default_role_on_register' => true,
         'default_role'                 => 'user',
         'namespace'                    => App\User::class,
-        'default_avatar'               => 'users/default.png',
+        'default_avatar'               => '/users/default.png',
         'redirect'                     => '/admin',
     ],
 
@@ -121,18 +121,18 @@ return [
         /*
          * Set whether or not the multilingual is supported by the BREAD input.
          */
-        'enabled' => false,
+        'enabled' => true,
 
         /*
          * Select default language
          */
-        'default' => 'en',
+        'default' => 'ru',
 
         /*
          * Select languages that are supported.
          */
         'locales' => [
-            'en',
+            'ru',
             //'pt',
         ],
     ],

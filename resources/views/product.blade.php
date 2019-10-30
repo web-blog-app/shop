@@ -26,16 +26,20 @@
     <div class="catalog-page common-catalog-page">
         <div class="side-bar">
             <div class="categories-title">
-                Категории
-            </div>
-            <ul class="categories-list">                
-            @foreach ($categories as $category)              
-              <li class="categories-list-item ">
-                <a href="{{ route('shop.index', ['category' => $category->slug]) }}">{{ $category->name }}</a>
+              Категории:
+          </div>
+          <ul class="categories-list">
+            @foreach ($categories as $category) 
+              <li class="categories-list-item sub-menu">
+                <a href="#weldings">
+                    {{ $category->name }}
+                </a>
+                  @if($category->sub->count())                  
+                   @include('partials.show', ['categories' => $category->sub])
+                  @endif
               </li>
-            @endforeach
-            </ul>
-        </div>
+              @endforeach       
+      </div>
 
         <div class="products-section">
             <div class="single-product">
