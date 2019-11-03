@@ -26,10 +26,24 @@
     margin: 0;
     padding: 0;
 
+    .categories-list-item {
+        &:nth-child(even) {
+            .main-category-menu-item {
+                background: #3498db;
+            }
+        }
+
+        &:nth-child(odd) {
+            .main-category-menu-item {
+                background: #3480db;
+            }
+        }
+    }
+
     & li {
         & a {
             display: block;
-            background: #3498db;
+            cursor: pointer;
             padding: 10px 15px;
             color: #fff;
             text-decoration: none;
@@ -101,6 +115,12 @@
 
         &.active {
             text-decoration: underline;
+        }
+
+        a {
+            &:hover {
+                color: $c-white;
+            }
         }
     }
 }

@@ -3,14 +3,7 @@
 @section('title', 'Search Results')
 
 
-
 @section('content')
-
-    @component('components.breadcrumbs')
-        <a href="/">Домашняя</a>
-        <i class="fa fa-chevron-right breadcrumb-separator"></i>
-        <span>Поиск</span>
-    @endcomponent
 
     <div class="container">
         @if (session()->has('success_message'))
@@ -31,7 +24,7 @@
     </div>
 
     <div class="search-results-container container">
-        <h1>Поиск результатов</h1>
+        <h1>Результаты поиска</h1>
         <p class="search-results-count">{{ $products->total() }} результат(ы) для '{{ request()->input('query') }}'</p>
 
         @if ($products->total() > 0)
@@ -41,7 +34,7 @@
                     <th>Назвавние</th>
                     <th>Подробности</th>
                     <th>Описание</th>
-                    <th>Цена</th>
+                    <th class="search-price">Цена</th>
                 </tr>
             </thead>
             <tbody>
@@ -50,7 +43,7 @@
                         <th><a href="{{ route('shop.show', $product->slug) }}">{{ $product->name }}</a></th>
                         <td>{{ $product->details }}</td>
                         <td>{{ str_limit($product->description, 80) }}</td>
-                        <td>{{ $product->presentPrice() }}</td>
+                        <td class="search-price">{{ $product->presentPrice() }}</td>
                     </tr>
                 @endforeach
             </tbody>

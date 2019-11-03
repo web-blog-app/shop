@@ -29,6 +29,7 @@
             background-size: cover;
             background-position: 50%;
             position: relative;
+            padding-bottom: 25px;
             box-shadow: 0 0 25px -1px $c-slide-description-shadow;
 
             @media (max-width: $screen-xs-max) {

@@ -6,7 +6,8 @@
   }
 
   .form-control {
-    margin-bottom: 30px;
+    border: none !important;
+    margin-bottom: 60px;
   }
 
   input {
@@ -43,7 +44,7 @@
      margin-right: 10px;
 
       &.active {
-        color: $c-purple;
+        color: #337ab7;
         text-decoration: underline;
       }
     }

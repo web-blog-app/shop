@@ -23,6 +23,7 @@
       Санккт-Петербург
     </div>
     <div class="header-top-contacts-phones">
+      <i class="fa fa-phone"></i>
       <a href="tel:+1234567890">+1234567890</a>
       <a href="tel:+1234567890">+1234567890</a>
     </div>

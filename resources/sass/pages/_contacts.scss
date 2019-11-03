@@ -1,8 +1,18 @@
+.contacts-info {
+  .title {
+    font-size: 48px;
+  }
+}
+
 .company-info {
+  box-shadow: 0 15px 14px -10px rgba(0, 0, 0, 0.55);
   display: flex;
+  justify-content: space-around;
+  font-size: 28px;
 
   @media (max-width: $screen-xs-max) {
     flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
   .address,

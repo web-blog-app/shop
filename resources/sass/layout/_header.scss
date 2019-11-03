@@ -52,6 +52,12 @@
   color: $c-header-text;
   padding: 5px 25px;
 
+  .header-top-contacts-phones {
+    a {
+      margin-left: 15px;
+    }
+  }
+
   .account {
     @media (max-width: $screen-sm-max) {
       display: none;

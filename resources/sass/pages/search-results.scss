@@ -1,6 +1,8 @@
 .search-results-container {
     min-height: 500px;
     margin: 20px auto;
+    font-weight: 900;
+    font-size: 24px;
 
     a {
         color: darkblue;
@@ -8,6 +10,11 @@
         &:hover {
             text-decoration: underline;
         }
+    }
+
+    .search-price {
+        min-width: 160px;
+        color: red;
     }
 }
 

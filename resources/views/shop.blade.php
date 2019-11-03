@@ -29,8 +29,8 @@
           </div>
           <ul class="categories-list">
             @foreach ($categories as $category) 
-              <li class="categories-list-item sub-menu">
-                <a href="#weldings">
+              <li class="categories-list-item sub-menu" data-slug="diskalmazbur">
+                <a class="main-category-menu-item">
                     {{ $category->name }}
                 </a>
                   @if($category->sub->count())                  
@@ -41,6 +41,13 @@
       </div>
 
       <div class="products-section">
+          @component('components.breadcrumbs')
+              <a href="/">Домашняя</a>
+              <i class="fa fa-chevron-right breadcrumb-separator"></i>
+              <span><a href="{{ route('shop.index') }}">Магазин</a></span>
+              <i class="fa fa-chevron-right breadcrumb-separator"></i>
+              <span>Категория</span>
+          @endcomponent
           <div class="sort-menu">
               <ul class="sort-menu-list">                  
                   <li class="sort-menu-list-item active">

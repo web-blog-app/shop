@@ -29,9 +29,9 @@
               Категории:
           </div>
           <ul class="categories-list">
-            @foreach ($categories as $category) 
-              <li class="categories-list-item sub-menu">
-                <a href="#weldings">
+            @foreach ($categories as $category)
+                  <li class="categories-list-item sub-menu" data-slug="diskalmazbur">
+                      <a class="main-category-menu-item">
                     {{ $category->name }}
                 </a>
                   @if($category->sub->count())                  

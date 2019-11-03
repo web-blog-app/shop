@@ -1,5 +1,10 @@
 @charset 'utf-8';
 
+// plugins
+@import "../../node_modules/slick-carousel/slick/slick";
+@import "../../node_modules/slick-carousel/slick/slick-theme";
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
 // Base
 @import 'base/colors';
 @import 'base/breakpoints';
@@ -27,7 +32,3 @@
 @import 'pages/my-orders';
 @import 'pages/contacts';
 @import 'pages/about';
-
-// plugins
-@import "../../node_modules/slick-carousel/slick/slick";
-@import "../../node_modules/slick-carousel/slick/slick-theme";

@@ -9,6 +9,23 @@ const validationRegexp = {
   phone: '^(?!\s*$).+'
 };
 
+function parseQuery(url) {
+  var query = {};
+  var queryString = url.toString().split('?');
+  if (queryString.length <= 1) {
+    return {};
+  }
+
+  var queryStringToparse = queryString[1];
+  var pairs = (queryStringToparse[0] === '?' ? queryStringToparse.substr(1) : queryStringToparse).split('&');
+  for (var i = 0; i < pairs.length; i++) {
+    var pair = pairs[i].split('=');
+    query[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
+  }
+
+  return query;
+}
+
 function toggleMobileMenu() {
   $('.mobile-menu').toggleClass('active');
 }
@@ -121,4 +138,11 @@ $(document).ready(function(){
     // $(this).find(".right").toggleClass("fa-caret-up fa-caret-down");
   });
 
+  const searchObject = parseQuery(document.URL);
+
+  if (searchObject.category) {
+    const activeMenuItem = $('.categories-list').find("[data-slug="+ searchObject.category + "]");
+    activeMenuItem.addClass('active');
+    activeMenuItem.children("ul").slideToggle("100");
+  }
 });
