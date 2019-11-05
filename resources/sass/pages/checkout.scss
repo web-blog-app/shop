@@ -3,10 +3,6 @@ h1.checkout-heading {
 }
 
 .checkout-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-   //grid-column-gap: 10px;
-  grid-gap: 30px;
   margin: 40px auto 80px;
   font-weight: 900;
   padding: 0 45px;
@@ -43,11 +39,6 @@ h1.checkout-heading {
 
     .checkout-table-row-left {
       width: 75%;
-    }
-
-    .checkout-table-row-right {
-      // width: 24%;
-      // padding-top: 10px;
     }
 
     .checkout-table-img {
@@ -108,7 +99,7 @@ h1.checkout-heading {
   .cart-button {
     background-color: transparent;
     cursor: pointer;
-    min-width: 260px;
+    max-width: 260px;
     padding: 14px 10px;
   }
 }

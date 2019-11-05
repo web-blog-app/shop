@@ -1,10 +1,11 @@
 .my-orders {
   .order-container {
     margin-bottom: 64px;
+    box-shadow: 0 15px 14px -10px $c-header-shadow;
   }
+
   .order-header {
-    background: #F6F6F6;
-    border: 1px solid #DDDDDD;
+    border: 1px solid #8c8a8a;
     padding: 14px;
     display: flex;
     align-items: center;
@@ -12,8 +13,7 @@
   }
 
   .order-products {
-    background: white;
-    border: 1px solid #DDDDDD;
+    border: 1px solid #8c8a8a;
     border-top: none;
     padding: 14px;
   }
@@ -33,6 +33,14 @@
     img {
       max-width: 140px;
       margin-right: 24px;
+    }
+  }
+
+  .order-link {
+    color: #23527c;
+
+    &:hover {
+      text-decoration: underline !important;
     }
   }
 }

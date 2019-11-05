@@ -7,13 +7,6 @@
 @endsection
 
 @section('content')
-
-    @component('components.breadcrumbs')
-        <a href="/">Домашняя</a>
-        <i class="fa fa-chevron-right breadcrumb-separator"></i>
-        <span>Мой заказ</span>
-    @endcomponent
-
     <div class="container">
         @if (session()->has('success_message'))
             <div class="alert alert-success">
@@ -33,13 +26,13 @@
     </div>
 
     <div class="products-section my-orders container">
-        <div class="sidebar">
-
+        <div class="action-bar">
             <ul>
-              <li><a href="{{ route('users.edit') }}">Мой профиль</a></li>
-              <li class="active"><a href="{{ route('orders.index') }}">Мои заказы</a></li>
+                <li><a href="{{ route('users.edit') }}">Мой профиль</a></li>
+                <li class="active"><a href="{{ route('orders.index') }}">Мои заказы</a></li>
             </ul>
-        </div> <!-- end sidebar -->
+        </div>
+
         <div class="my-profile">
             <div class="products-header">
                 <h1 class="stylish-heading">Номер заказа: {{ $order->id }}</h1>
@@ -63,7 +56,7 @@
                         </div>
                         <div>
                             <div class="order-header-items">
-                                <div><a href="#">Счет-фактура</a></div>
+                                <div><span>Счет-фактура</span></div>
                             </div>
                         </div>
                     </div>
@@ -115,7 +108,7 @@
                                 <div><img src="{{ asset($product->image) }}" alt="Product Image"></div>
                                 <div>
                                     <div>
-                                        <a href="{{ route('shop.show', $product->slug) }}">{{ $product->name }}</a>
+                                        <a class="order-link" href="{{ route('shop.show', $product->slug) }}">{{ $product->name }}</a>
                                     </div>
                                     <div>{{ presentPrice($product->price) }}</div>
                                     <div>Количество: {{ $product->pivot->quantity }}</div>

@@ -1,5 +1,7 @@
 .my-profile {
   font-weight: 900;
+  padding-bottom: 120px;
+  font-size: 20px;
 
   label {
     display: block;
@@ -15,7 +17,7 @@
       padding: 16px 10px;
       border-radius: 5px;
       width: 66.6%;
-      font-size: 14px;
+      font-size: 18px;
   }
 
   .my-profile-button {
@@ -30,7 +32,8 @@
   }
 }
 
-.profile-section {
+.profile-section,
+.my-orders {
   .action-bar {
     margin-top: 35px;
 

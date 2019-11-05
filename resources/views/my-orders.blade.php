@@ -57,9 +57,9 @@
                         </div>
                         <div>
                             <div class="order-header-items">
-                                <div><a href="{{ route('orders.show', $order->id) }}">Информация для заказа</a></div>
+                                <div><a class="order-link" href="{{ route('orders.show', $order->id) }}">Информация для заказа</a></div>
                                 <div>|</div>
-                                <div><a href="#">Счет-фактура</a></div>
+                                <div><span>Счет-фактура</span></div>
                             </div>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
                                 <div><img src="{{ asset($product->image) }}" alt="Product Image"></div>
                                 <div>
                                     <div>
-                                        <a href="{{ route('shop.show', $product->slug) }}">{{ $product->name }}</a>
+                                        <a class="order-link"  href="{{ route('shop.show', $product->slug) }}">{{ $product->name }}</a>
                                     </div>
                                     <div>{{ presentPrice($product->price) }}</div>
                                     <div>Quantity: {{ $product->pivot->quantity }}</div>
