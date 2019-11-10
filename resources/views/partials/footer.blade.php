@@ -1,13 +1,13 @@
 <footer class="footer container">
     <div class="footer-description">
-        © 2019 А2 - надежное оборудование, проверенный инструмент
+        © 2019 {{setting('site.my_company')}} - надежное оборудование, проверенный инструмент
     </div>
     <div class="footer-address-container">
         <div class="footer-address">
-            Санкт-Петербург ул. Любых Инструметов д.1 пом.1
+            {{setting('site.my_addr')}}
         </div>
         <div class="footer-phones">
-            +7 (965) 123-12-12
+            {{setting('site.my_phone')}}
         </div>
     </div>
 </footer>

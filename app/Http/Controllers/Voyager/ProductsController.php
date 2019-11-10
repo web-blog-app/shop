@@ -35,8 +35,9 @@ class ProductsController extends VoyagerBaseController
     public function index(Request $request)
     {
         // GET THE SLUG, ex. 'posts', 'pages', etc.
+        
         $slug = $this->getSlug($request);
-
+        
         // GET THE DataType based on the slug
         $dataType = Voyager::model('DataType')->where('slug', '=', $slug)->first();
 

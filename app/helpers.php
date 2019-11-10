@@ -9,7 +9,7 @@ function presentPrice($price)
 
 function presentDate($date)
 {
-    return Carbon::parse($date)->format('M d, Y');
+    return Carbon::parse($date)->format('d.m.Y');
 }
 
 function setActiveCategory($category, $output = 'active')
@@ -19,7 +19,7 @@ function setActiveCategory($category, $output = 'active')
 
 function productImage($path)
 {
-    return  'http://shop/storage/app/public/'.$path ;
+    return  'http://localhost/shopfinal/storage/app/public/'.$path ;
 }
 
 function getNumbers()

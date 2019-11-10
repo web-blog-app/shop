@@ -24,8 +24,8 @@
     </div>
     <div class="header-top-contacts-phones">
       <i class="fa fa-phone"></i>
-      <a href="tel:+1234567890">+1234567890</a>
-      <a href="tel:+1234567890">+1234567890</a>
+      <a href="tel:{{setting('site.my_phone')}}">{{setting('site.my_phone')}}</a>
+      <a href="tel:{{setting('site.my_phone2')}}">{{setting('site.my_phone2')}}</a>
     </div>
     <ul class="menu-list">
       <li><a href="{{ route('contact') }}">Контакты</a></li>
@@ -70,10 +70,8 @@
     </a>
   </div>
   <div class="header-bottom">
-    <ul class="menu">
-      <li class="actions"><a href="{{ route('shop.index', ['category' => 'action']) }}">Акции</a></li>
-      <li><a href="{{ route('shop.index') }}">Каталог</a></li>
-       
+    <ul class="menu">      
+      <li class="actions"><a href="{{ route('shop.index') }}">Каталог</a></li>       
       {{ menu('main', 'partials.menus.main') }}     
     </ul>
   </div>

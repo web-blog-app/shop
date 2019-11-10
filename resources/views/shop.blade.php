@@ -29,10 +29,10 @@
           </div>
           <ul class="categories-list">
             @foreach ($categories as $category) 
-              <li class="categories-list-item sub-menu" data-slug="diskalmazbur">
-                <a class="main-category-menu-item">
+              <li class="categories-list-item sub-menu" data-slug="{{$category -> slug}}">
+                <a class="main-category-menu-item" href="{{ route('shop.index', ['category' => $category->slug]) }}">
                     {{ $category->name }}
-                </a>
+                </a>               
                   @if($category->sub->count())                  
                    @include('partials.show', ['categories' => $category->sub])
                   @endif
@@ -46,11 +46,11 @@
               <i class="fa fa-chevron-right breadcrumb-separator"></i>
               <span><a href="{{ route('shop.index') }}">Магазин</a></span>
               <i class="fa fa-chevron-right breadcrumb-separator"></i>
-              <span>Категория</span>
+              <span><span><a href="#">{{$categoryName}}</a></span></span>
           @endcomponent
           <div class="sort-menu">
               <ul class="sort-menu-list">                  
-                  <li class="sort-menu-list-item active">
+                  <li class="sort-menu-list-item ">
                     <a href="{{ route('shop.index', ['category'=> request()->category, 'sort' => 'low_high']) }}">Сначала дешёвые</a> 
                   </li>
                   <li class="sort-menu-list-item">
@@ -63,7 +63,7 @@
               @forelse ($products as $product)
               <div class="product-card">
                   <a href="{{ route('shop.show', $product->slug) }}" class="product-link">
-                      <img class="card-image" src=" {{ productImage($product->image) }} " alt="">
+                      <img class="card-image" src=" {{ productImage($product->image) }} " alt="{{ $product->name }}">
                       <div class="card-title">
                           {{ $product->name }}
                       </div>

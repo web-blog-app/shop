@@ -5,7 +5,7 @@
     <div class="contacts">
         <div class="contacts-info container">
             <div class="title">
-                A2 всегда на связи
+                {{setting('site.my_company')}} всегда на связи
             </div>
             <div class="subtitle company-info">
                 <div class="addresses">
@@ -13,13 +13,13 @@
                         Юридический адрес:
                     </p>
                     <p>
-                        Санкт-Петербург ул. Любых Инструметов д.1 пом.1
+                        {{setting('site.my_addr')}}
                     </p>
                     <p>
                         Адрес магазина:
                     </p>
                     <p>
-                        Санкт-Петербург ул. Любых Инструметов д.1 пом.1
+                        {{setting('site.my_addr')}}
                     </p>
                 </div>
                 <div class="phones">
@@ -27,14 +27,12 @@
                         Телефоны:
                     </p>
                     <p>
-                        + 7 (965) 123-12-12
+                        {{setting('site.my_phone')}}
                     </p>
                     <p>
-                        + 7 (965) 123-12-12
+                        {{setting('site.my_phone2')}}
                     </p>
-                    <p>
-                        + 7 (965) 123-12-12
-                    </p>
+                    
                 </div>
             </div>
         </div>
@@ -48,13 +46,13 @@
             <div class="map-content">
                 <div class="map-info container">
                     <div class="address-title">
-                        Компания А2 располагается по адресу:
+                        Компания {{setting('site.my_company')}} располагается по адресу:
                     </div>
                     <div class="address">
-                        Санкт-Петербург ул. Любых Инструметов д.1 пом.1
+                        {{setting('site.my_addr')}}
                     </div>
                     <div class="phone">
-                        + 7 (965) 123-12-12
+                        {{setting('site.my_phone')}}
                     </div>
                     <div class="recall-form-button" data-micromodal-trigger="modal-call">
                         заказать звонок

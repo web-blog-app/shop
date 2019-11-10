@@ -6,64 +6,73 @@
         <div class="main-slider">
             <div class="slide">
                 <div class="slide-content container">
-                    <img src="{{ asset('/img/slider/slider1.png') }}" alt="">
-                    <div class="description-container" style="background-image:url('{{ asset('/img/slider/slidebg1.jpg') }}')">
-                        <div class="slide-layer"></div>
-                        <ul class="description">
-                            <li>
-                                Надёжность
-                            </li>
-                            <li>
-                                Доставка по всей России!
-                            </li>
-                            <li>
-                                Цена всего 29999 руб.
-                            </li>
-                        </ul>
-                        <div class="slide-button">
-                            Подробнее
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="slide-content container">
-                    <img src="{{ asset('/img/slider/slider2.png') }}" alt="">
-                    <div class="description-container" style="background-image:url('{{ asset('/img/slider/slidebg2.jpg') }}')">
-                        <div class="slide-layer"></div>
-                        <ul class="description">
-                            <li>
-                                Выбор года!
-                            </li>
-                            <li>
-                                Качество
-                            </li>
-                            <li>
-                                Скидки!
-                            </li>
-                        </ul>
-                        <div class="slide-button">
-                            Подробнее
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="slide-content container">
                     <img src="{{ asset('/img/slider/slide1.jpg') }}" alt="">
                     <div class="description-container" style="background-image:url('{{ asset('/img/slider/slidebg1.jpg') }}')">
                         <div class="slide-layer"></div>
                         <ul class="description">
-                            <li>
-                                Хит продаж!
+                            <li >                              
+                               <strong>Диск алмазный (БЕТОН):</strong>                              
                             </li>
                             <li>
-                                Маска в подарок!
+                                Посадочное отверстие: 25,4 мм
+                            </li>
+                            <li>Высота алмазной кромки: 7 мм</li>
+                            <li>Тип резки: сухая, мокрая</li>
+                            <li>
+                                Цена всего <strong style="color:red">2999 руб</strong>.
+                            </li>
+                        </ul>
+                        <div class="slide-button">
+                            Подробнее
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-content container">
+                    <img src="{{ asset('/img/slider/slide2.jpg') }}" alt="">
+                    <div class="description-container" style="background-image:url('{{ asset('/img/slider/slidebg2.jpg') }}')">
+                        <div class="slide-layer"></div>
+                        <ul class="description">
+                            <li >                         
+                               <strong>Диск алмазный (БЕТОН):</strong>                                
                             </li>
                             <li>
-                                Гарантия 3 года!
+                                Посадочное отверстие: 25,4 мм
                             </li>
-
+                            <li>Высота алмазной кромки: 7 мм</li>
+                            <li>Тип резки: сухая, мокрая</li>
+                            <li>
+                                Цена всего: <strong style="color:red">2999 руб</strong>.
+                            </li>
+                        </ul>
+                        <div class="slide-button">
+                            Подробнее
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-content container">
+                    <img src="{{ asset('/img/slider/slide3.jpg') }}" alt="">
+                    <div class="description-container" style="background-image:url('{{ asset('/img/slider/slidebg3.jpg') }}')">
+                        <div class="slide-layer"></div>
+                        <ul class="description">
+                           <li >                                
+                               <strong>Диск алмазный (БЕТОН):</strong>                               
+                            </li>
+                            <li>
+                                Посадочное отверстие: 25,4 мм
+                            </li>
+                            <li>
+                                Высота алмазной кромки: 7 мм
+                            </li>
+                            <li>
+                                Тип резки: сухая, мокрая
+                            </li>
+                            <li>
+                                Цена всего: <strong style="color:red">5467 руб</strong>.
+                            </li>
                         </ul>
                         <div class="slide-button">
                             Подробнее
@@ -87,8 +96,8 @@
                         <img src="{{ productImage($product->image) }}" alt="product">
                         <div class="product-description">
                             
-                            <span class="warning">
-                            Что отличает данный продукт от других!
+                            <span class="description">
+                            {{$product->details}}
                             </span>
                         </div>
                         <div class="product-price">
@@ -99,7 +108,7 @@
                             Купить
                         </a>
                         </div>
-                        <div class="wave">-50%</div>
+                        <div class="wave"></div>
                     </div>
                 </div>
                 @endforeach               
@@ -118,13 +127,13 @@
             <div class="map-content">
                 <div class="map-info container">
                     <div class="address-title">
-                        Компания А2 располагается по адресу:
+                    Компания {{setting('site.my_company')}} располагается по адресу:
                     </div>
                     <div class="address">
-                        Санкт-Петербург ул. Любых Инструметов д.1 пом.1
+                        {{setting('site.my_addr')}}
                     </div>
                     <div class="phone">
-                        + 7 (965) 123-12-12
+                        {{setting('site.my_phone')}}
                     </div>
                     <div class="recall-form-button" data-micromodal-trigger="modal-call">
                         заказать звонок
@@ -151,17 +160,16 @@
 
                     <div class="advantage-title">Все новинки у нас!</div>
                     <div class="advantages-description">
-                        Мы всегда помним о пожеланиях клиентов и никогда не забываем
-                        о их предпочтениях. Это позволяет работать максимально эффективно
+                        У нас вы найдете тольйко новую и современную технику, которая соответствует
+                        всем стандартам качества и ГОСТам.
                     </div>
                 </div>
                 <div class="advantage-item">
                     <img src="{{ asset('/img/advantages/a3.jpg') }}" alt="">
 
-                    <div class="advantage-title">Все виды оплаты</div>
+                    <div class="advantage-title">Без обмана</div>
                     <div class="advantages-description">
-                        Мы всегда помним о пожеланиях клиентов и никогда не забываем
-                        о их предпочтениях. Это позволяет работать максимально эффективно
+                        Оплата производится наличными про получении товара.
                     </div>
                 </div>
                 <div class="advantage-item">
@@ -169,8 +177,7 @@
 
                     <div class="advantage-title">Доставляем!</div>
                     <div class="advantages-description">
-                        Мы всегда помним о пожеланиях клиентов и никогда не забываем
-                        о их предпочтениях. Это позволяет работать максимально эффективно
+                        Доставка производится более чем в 2000 пунктов выдачи.
                     </div>
                 </div>
             </div>

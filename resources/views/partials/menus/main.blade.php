@@ -2,7 +2,7 @@
     @foreach($items as $menu_item)
         <li>  
 
-            <a href="{{ $menu_item->url }}">                
+            <a href="{{ asset($menu_item->url) }}">                
                 {{$menu_item->title}}
                 @if ($menu_item->title === 'Cart')
                     @if (Cart::instance('default')->count() > 0)

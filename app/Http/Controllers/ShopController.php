@@ -15,15 +15,17 @@ class ShopController extends Controller
      */
     public function index()
     {
-       $pagination = 9;
+       $pagination = 12;
        $categories = Category::getCategories();
           
 
         if (request()->category) {
             $products = Product::with('categories')->whereHas('categories', function ($query) {
                 $query->where('slug', request()->category);
-            });             
+            }); 
+                    
             $categoryName = optional($categories->where('slug', request()->category)->first())->name;
+           
         } else {
             $products = Product::where('featured', true);
             $categoryName = 'Рекомендуемые';
