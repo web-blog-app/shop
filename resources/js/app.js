@@ -145,4 +145,12 @@ $(document).ready(function(){
     activeMenuItem.addClass('active');
     activeMenuItem.children("ul").slideToggle("100");
   }
+
+  $('.go-back-button').on('click', function () {
+    window.history.back();
+  });
+
+  setTimeout(function () {
+    $('.preloader').remove();
+  }, 1000);
 });

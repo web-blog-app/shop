@@ -13,7 +13,7 @@
                 {{ session()->get('success_message') }}
             </div>
         @endif
-
+            <span class="go-back-button">Назад</span>
         @if(count($errors) > 0)
             <div class="alert alert-danger">
                 <ul>

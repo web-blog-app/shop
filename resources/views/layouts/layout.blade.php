@@ -10,7 +10,7 @@
 
         <title> @yield('title', '')</title>
 
-        <link href="/img/favicon.ico" rel="SHORTCUT ICON" />
+        <link href="{{ asset('img/favico.ico') }}" rel="SHORTCUT ICON" />
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat%7CRoboto:300,400,700" rel="stylesheet">
@@ -24,6 +24,15 @@
 
 
 <body class="@yield('body-class', '')">
+    <div class="container preloader">
+        <div class="preloader-container">
+            <div class="preloader-item"></div>
+            <div class="preloader-item"></div>
+            <div class="preloader-item"></div>
+            <div class="preloader-item"></div>
+            <div class="preloader-item"></div>
+        </div>
+    </div>
     @include('partials.nav')
     <div class="wrapper">
 

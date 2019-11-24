@@ -105,3 +105,14 @@ a {
         opacity: 1;
     }
 }
+
+.go-back-button {
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 20px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

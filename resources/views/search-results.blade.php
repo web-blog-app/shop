@@ -5,12 +5,7 @@
 
 @section('content')
 
- @component('components.breadcrumbs')
-        <a href="/">Домашняя</a>
-        <i class="fa fa-chevron-right breadcrumb-separator"></i>
-        <span>Поиск</span>
-    @endcomponent
-
+ <span class="go-back-button">Назад</span>
     <div class="container">
         @if (session()->has('success_message'))
             <div class="alert alert-success">
