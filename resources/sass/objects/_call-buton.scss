@@ -14,6 +14,11 @@
   transition:.3s;
   -webkit-animation:hoverWave linear 1s infinite;
   animation:hoverWave linear 1s infinite;
+
+  @media (max-width: $screen-sm-max) {
+    height:38px;
+    width:38px;
+  }
 }
 
 .callback-bt .text-call{
@@ -22,6 +27,11 @@
   border-radius:50%;
   position:relative;
   overflow:hidden;
+
+  @media (max-width: $screen-sm-max) {
+    height:38px;
+    width:38px;
+  }
 }
 
 .callback-bt .text-call span {
@@ -63,6 +73,11 @@
   font-size:34px;
   line-height: 66px;
   transition: .5s ease-in-out;
+
+  @media (max-width: $screen-sm-max) {
+    font-size:22px;
+    line-height: 35px;
+  }
 }
 
 .callback-bt i  {

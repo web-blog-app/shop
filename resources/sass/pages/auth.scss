@@ -5,9 +5,17 @@
     max-width: 80%;
     margin: 100px auto;
 
+    @media (max-width: $screen-md-max) {
+        flex-wrap: wrap;
+    }
+
     .auth-right,
     .auth-left {
         flex-basis: 40%;
+
+        @media (max-width: $screen-md-max) {
+            flex-basis: 100%;
+        }
     }
 
     input {
@@ -28,6 +36,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     .auth-button {
@@ -48,7 +57,9 @@
         color: $text-color;
         border-radius: 5px;
         border: 1px solid $text-color;
+        display: inline-block;
         padding: 12px 50px;
+        margin: 15px 0;
 
         &:hover {
             background: $text-color;
@@ -59,10 +70,23 @@
     .auth-right {
         border-left: 1px solid $separator-color;
         padding-left: 100px;
+
+        @media (max-width: $screen-md-max) {
+            margin: 35px 0;
+        }
+
+        @media (max-width: $screen-xs-max) {
+            padding-left: 10px;
+        }
     }
 
     .already-have-container {
         text-align: right;
-    }
 
+        @media (max-width: $screen-xs-max) {
+            width: 100%;
+            margin: 15px 0;
+            text-align: left;
+        }
+    }
 }

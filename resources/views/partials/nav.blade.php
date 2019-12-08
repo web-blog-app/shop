@@ -23,9 +23,8 @@
       Санккт-Петербург
     </div>
     <div class="header-top-contacts-phones">
-      <i class="fa fa-phone"></i>
-      <a href="tel:{{setting('site.my_phone')}}">{{setting('site.my_phone')}}</a>
-      <a href="tel:{{setting('site.my_phone2')}}">{{setting('site.my_phone2')}}</a>
+      <a href="tel:{{setting('site.my_phone')}}"><i class="fa fa-phone"></i>{{setting('site.my_phone')}}</a>
+      <a href="tel:{{setting('site.my_phone2')}}"><i class="fa fa-phone"></i>{{setting('site.my_phone2')}}</a>
     </div>
     <ul class="menu-list">
       <li><a href="{{ route('contact') }}">Контакты</a></li>
@@ -71,9 +70,21 @@
   </div>
   <div class="header-bottom">
     <ul class="menu">      
-      <li class="actions"><a href="{{ route('shop.index') }}">Каталог</a></li>       
-      {{ menu('main', 'partials.menus.main') }}     
+      <li class="actions"><a href="{{ route('shop.index') }}">Каталог</a></li>
+      {{ menu('main', 'partials.menus.main') }}
     </ul>
+    <div class="btn-group menu-mobile">
+      <span class="actions"><a href="{{ route('shop.index') }}">Каталог</a></span>
+      <button type="button" class="btn btn-default">Популярные Категории</button>
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+        <span class="caret"></span>
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+      <ul class="dropdown-menu">
+        {{ menu('main', 'partials.menus.main') }}
+      </ul>
+    </div>
   </div>
 </header>
 

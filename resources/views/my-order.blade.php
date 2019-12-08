@@ -61,7 +61,7 @@
                         </div>
                     </div>
                     <div class="order-products">
-                        <table class="table" style="width:50%">
+                        <table class="table products-table">
                             <tbody>
                                 <tr>
                                     <td>Имя</td>

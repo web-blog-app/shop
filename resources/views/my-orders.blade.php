@@ -56,8 +56,6 @@
                         <div>
                             <div class="order-header-items">
                                 <div><a class="order-link" href="{{ route('orders.show', $order->id) }}">Информация для заказа</a></div>
-                                <div>|</div>
-                                <div><span>Счет-фактура</span></div>
                             </div>
                         </div>
                     </div>

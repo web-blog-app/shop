@@ -2,6 +2,10 @@
   .order-container {
     margin-bottom: 64px;
     box-shadow: 0 15px 14px -10px $c-header-shadow;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 15px;
+    }
   }
 
   .order-header {
@@ -16,6 +20,14 @@
     border: 1px solid #8c8a8a;
     border-top: none;
     padding: 14px;
+
+    .products-table {
+      width: 50%;
+
+      @media (max-width: $screen-xs-max) {
+        width: 100%;
+      }
+    }
   }
 
   .order-header-items {

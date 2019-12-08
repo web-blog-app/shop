@@ -30,6 +30,14 @@ function toggleMobileMenu() {
   $('.mobile-menu').toggleClass('active');
 }
 
+function toggleFiltersMenu() {
+  $('.mobile-filters-menu').toggleClass('active');
+}
+
+function toggleCategoriesMenu() {
+  $('.mobile-categories-menu').toggleClass('active');
+}
+
 function validate(form) {
   const $formInput = $(form).find('.form-input');
 
@@ -93,6 +101,12 @@ $(document).ready(function(){
 
   $('.hamburger').on('click', toggleMobileMenu);
   $('.close').on('click', toggleMobileMenu);
+
+  $('.open-filters').on('click', toggleFiltersMenu);
+  $('.close-filters').on('click', toggleFiltersMenu);
+
+  $('.open-categories').on('click', toggleCategoriesMenu);
+  $('.close-categories').on('click', toggleCategoriesMenu);
 
   $('.form').on('submit', sendRequest);
 

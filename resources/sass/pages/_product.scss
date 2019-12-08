@@ -3,11 +3,19 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+
+  @media (max-width: $screen-sm-max) {
+    font-size: 18px;
+  }
 }
 
 .product-images,
 .product-section-information {
   flex-basis: 50%;
+
+  @media (max-width: $screen-md-max) {
+    flex-basis: 100%;
+  }
 }
 
 .product-section-image {
@@ -25,6 +33,10 @@
   flex-wrap: wrap;
   margin-top: 25px;
   width: 100%;
+
+  @media (max-width: $screen-md-max) {
+    justify-content: center;
+  }
 }
 
 .product-section-thumbnail {
@@ -43,9 +55,9 @@
   }
 
   img {
-    height: auto;
+    height: 100%;
     max-height: 100px;
-    object-fit: contain;
+    object-fit: cover;
     width: 100%;
   }
 }

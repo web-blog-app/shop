@@ -4,6 +4,11 @@
     font-weight: 900;
     font-size: 24px;
 
+    @media (max-width: $screen-md-max) {
+        font-size: 15px;
+        overflow: scroll;
+    }
+
     a {
         color: darkblue;
 

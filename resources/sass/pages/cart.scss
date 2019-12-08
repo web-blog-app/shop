@@ -4,15 +4,28 @@
   font-weight: 900;
   padding: 0 45px;
 
+  @media (max-width: $screen-md-max) {
+    padding: 0 10px;
+  }
+
     h2 {
       margin-bottom: 30px;
       font-size: 32px;
       font-weight: 900;
+
+      @media (max-width: $screen-sm-max) {
+        font-size: 20px;
+      }
     }
 
     .cart-table {
       font-size: 26px;
       font-weight: 900;
+      overflow-x: scroll;
+
+      @media (max-width: $screen-sm-max) {
+        font-size: 18px;
+      }
     }
 
     .cart-table-row {
@@ -33,11 +46,19 @@
         .cart-table-row-left {
           justify-content: flex-start;
             width: 50%;
+
+          @media (max-width: $screen-sm-max) {
+            width: auto;
+          }
         }
 
         .cart-table-row-right {
             width: 33%;
             padding-top: 10px;
+
+          @media (max-width: $screen-sm-max) {
+            width: auto;
+          }
         }
 
         .cart-table-img {
@@ -47,6 +68,7 @@
         .cart-table-actions {
             text-align: right;
             font-size: 14px;
+            margin: 0 10px;
         }
 
         .cart-item-details {
@@ -69,6 +91,7 @@
           font-size: 18px;
           margin: 5px 0;
           outline: none;
+          text-align: right;
 
             &:hover {
                 color: lighten($text-color, 30%);
@@ -82,6 +105,8 @@
 
       .cart-price {
         color: $c-red;
+        margin: 0 10px;
+        white-space: nowrap;
       }
     }
 
@@ -91,6 +116,11 @@
       display: flex;
       justify-content: space-between;
       background: $light-gray-background;
+      overflow-x: scroll;
+
+      @media (max-width: $screen-sm-max) {
+        font-size: 18px;
+      }
 
       .promo-text {
         color: $c-red;
@@ -98,6 +128,12 @@
 
       .cart-totals-left {
           width: 50%;
+        margin: 0 10px;
+
+
+        @media (max-width: $screen-sm-max) {
+          width: auto;
+        }
       }
 
       .cart-totals-right {
@@ -106,6 +142,11 @@
         justify-content: space-between;
         width: 35%;
         text-align: right;
+        margin: 0 10px;
+
+        @media (max-width: $screen-sm-max) {
+          width: auto;
+        }
       }
 
       .cart-totals-total {
@@ -139,6 +180,10 @@
     padding: 16px 0;
     width: 50%;
 
+    @media (max-width: $screen-sm-max) {
+      width: 100%;
+    }
+
     form {
       display: flex;
       justify-content: space-between;
@@ -164,6 +209,11 @@
   }
 }
 
+.cart-totals-subtotal {
+  white-space: nowrap;
+  margin: 0 10px;
+}
+
 .might-like-section {
   padding: 0 30px 45px;
 
@@ -171,12 +221,21 @@
     margin-bottom: 30px;
     font-size: 32px;
     font-weight: 900;
+
+    @media (max-width: $screen-sm-max) {
+      font-size: 20px;
+    }
   }
 
   .might-like-container {
     display: flex;
     font-size: 24px;
     font-weight: 600;
+    flex-wrap: wrap;
+
+    @media (max-width: $screen-sm-max) {
+      font-size: 18px;
+    }
 
     .product-link {
       display: block;
