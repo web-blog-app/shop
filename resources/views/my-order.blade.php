@@ -76,7 +76,7 @@
                                     <td>{{ $order->billing_city }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Промежуточный итог</td>
+                                    <td>Суммма</td>
                                     <td>{{ presentPrice($order->billing_subtotal) }}</td>
                                 </tr>
                                 <tr>

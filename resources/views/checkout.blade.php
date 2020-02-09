@@ -129,9 +129,9 @@
                             Discount ({{ session()->get('coupon')['name'] }}) :
                             <br>
                             <hr>
-                            Новый промежуточный итог <br>
+                            Новая сумма <br>
                         @endif
-                        Tax ({{config('cart.tax')}}%)<br>
+                        Налог ({{config('cart.tax')}}%)<br>
                         <span class="checkout-totals-total">Всего</span>
 
                     </div>

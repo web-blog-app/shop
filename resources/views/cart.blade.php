@@ -85,19 +85,18 @@
                 </div>
 
                 <div class="cart-totals-right">
-                    <div>
-                        Промежуточный итог <br>
+                    <div class="cart-totals-text">Сумма <br>
                         @if (session()->has('coupon'))
                             Code ({{ session()->get('coupon')['name'] }})
                             <form action="{{ route('coupon.destroy') }}" method="POST" style="display:block">
                                 {{ csrf_field() }}
                                 {{ method_field('delete') }}
-                                <button type="submit" style="font-size:14px;">Remove</button>
+                                <button type="submit" style="font-size:14px;">Удалить</button>
                             </form>
                             <hr>
-                           Новый промежуточный итог <br>
+                           Новая сумма <br>
                         @endif
-                        Tax ({{config('cart.tax')}}%)<br>
+                        Налог ({{config('cart.tax')}}%)<br>
                         <span class="cart-totals-total">Всего</span>
                     </div>
                     <div class="cart-totals-subtotal">

@@ -57,6 +57,7 @@
             padding-top: 10px;
 
           @media (max-width: $screen-sm-max) {
+            padding-top: 0;
             width: auto;
           }
         }
@@ -122,6 +123,10 @@
         font-size: 18px;
       }
 
+      @media (max-width: $screen-xs-max) {
+        padding-left: 0;
+      }
+
       .promo-text {
         color: $c-red;
       }
@@ -155,6 +160,10 @@
           font-size: 22px;
           line-height: 2;
       }
+    }
+
+    .cart-totals-text {
+      min-width: 110px;
     }
 
     .cart-buttons {
