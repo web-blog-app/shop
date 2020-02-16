@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'Search Results')
+@section('title', 'Результаты поиска')
 
 
 @section('content')
@@ -39,8 +39,7 @@
             </thead>
             <tbody>
                 @foreach ($products as $product)
-                    <tr>  <td>{{ $product->image
-                     }}             </td>  
+                    <tr>  
                         <th><a href="{{ route('shop.show', $product->slug) }}">{{ $product->name }}</a></th>
                         <td>{{ $product->details }}</td>                        
                         <td class="search-price">{{ $product->presentPrice() }}</td>

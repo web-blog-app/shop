@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'Shopping Cart')
+@section('title', 'Тележка')
 
 
 @section('content')
