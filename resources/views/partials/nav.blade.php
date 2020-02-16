@@ -10,18 +10,16 @@
         <input type="search" name="query" id="query" value="{{ request()->input('query') }}" class="search-box" placeholder="Найти..." required>
       {{ csrf_field() }}
       </form>
-      <div class="cart">
-        <a  href="{{ route('cart.index') }}">
-          @if (Cart::instance('default')->count() > 0)
-            <span class="cart-count"><span>{{ Cart::instance('default')->count() }}</span></span>
-          @endif
-          <i class="fas fa-cart-plus cart-icon"></i>
-          <span class="cart-title">Тележка</span>
-        </a>
-      </div>
       <ul class="mobile-menu-list">
+        <li><a  href="{{ route('cart.index') }}">
+            <span class="cart-title">Тележка</span>
+            @if (Cart::instance('default')->count() > 0)
+              <span class="cart-count"><span>{{ Cart::instance('default')->count() }}</span></span>
+            @endif
+          </a>
+        </li>
         <li><a href="{{ route('landing-page') }}">Главная</a></li>
-        <li><a href="{{ route('shop.index') }}">Каталог</a></li> 
+        <li><a href="{{ route('shop.index') }}">Каталог</a></li>
         <li><a href="{{ route('contact') }}">Контакты</a></li>
         <li><a href="{{ route('about') }}">О нас</a></li>
       </ul>

@@ -1,4 +1,4 @@
-<footer class="footer container">
+<footer class="footer">
     <div class="footer-description">
         © 2019 {{setting('site.my_company')}} - надежное оборудование, проверенный инструмент
     </div>

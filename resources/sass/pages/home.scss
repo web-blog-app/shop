@@ -21,9 +21,12 @@
                 font-size: 24px;
             }
 
+            @media (max-width: $screen-sm-max) {
+                padding-left: 0px;
+            }
+
             @media (max-width: $screen-xs-max) {
                 padding-top: 0;
-                padding-left: 100px;
             }
         }
 
@@ -103,6 +106,7 @@
 
         @media (max-width: $screen-xs-max) {
             flex-direction: column;
+            padding-bottom: 30px;
         }
 
     }
@@ -295,11 +299,11 @@
 
             &::after {
                 transform: rotate(-60deg);
-                content: "SALE";
+                content: "ЛИДЕР ПРОРДАЖ";
                 color: $c-product-wave-text;
                 padding-top: 14px;
                 box-sizing: border-box;
-                font-size: 31px;
+                font-size: 16px;
             }
         }
     }
@@ -445,6 +449,11 @@
 
 .feedback-slide {
     padding: 10px 0;
+
+    @media (max-width: $screen-xs-max) {
+        width: 90% !important;
+        margin: 0 auto;
+    }
 }
 
 .feedback-slide-content {

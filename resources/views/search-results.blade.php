@@ -32,16 +32,18 @@
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
+                    <th>Изображение</th>
                     <th>Назвавние</th>
-                    <th>Подробности</th>                    
+                    <th>Подробности</th>
                     <th class="search-price">Цена</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($products as $product)
                     <tr>  
+                        <th><img src="{{ productImage($product->image) }}" alt="{{$product->name}}"></th>
                         <th><a href="{{ route('shop.show', $product->slug) }}">{{ $product->name }}</a></th>
-                        <td>{{ $product->details }}</td>                        
+                        <td>{{ $product->details }}</td>
                         <td class="search-price">{{ $product->presentPrice() }}</td>
                     </tr>
                 @endforeach

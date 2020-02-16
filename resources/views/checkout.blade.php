@@ -107,7 +107,8 @@
                         </div> <!-- end checkout-table -->
 
                         <div class="checkout-table-row-right">
-                            <div class="checkout-table-quantity">{{ $item->qty }}</div>
+                            <div class="checkout-table-text">Количество </div>
+                            <div class="checkout-table-quantity"> {{ $item->qty }}</div>
                         </div>
                     </div> <!-- end checkout-table-row -->
                     @endforeach
