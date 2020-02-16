@@ -7,19 +7,18 @@
             <div class="slide">
                 <div class="slide-content container">
                     <img src="{{ asset('/img/slider/slide1.jpg') }}" alt="">
-                    <div class="description-container" style="background-image:url('{{ asset('/img/slider/slidebg1.jpg') }}')">
+                    <div class="description-container" style="background-image:url('{{ asset('/img/slider/slidebg2.jpg') }}')">
                         <div class="slide-layer"></div>
                         <ul class="description">
                             <li >                              
-                               <strong>Диск алмазный (БЕТОН):</strong>                              
+                               <strong> Solaris MULTIMIG-225 (MIG/MMA)</strong>                              
                             </li>
+                            <li>-горелка 3 метра в комплекте;</li>
+                           <li> - возможность смены полярности;</li>
+                            <li>- полуавтоматическая и ручная дуговая сварка;</li>
+                            <li>- режим точечной сварки от 0.1 до 10 секунд; </li>
                             <li>
-                                Посадочное отверстие: 25,4 мм
-                            </li>
-                            <li>Высота алмазной кромки: 7 мм</li>
-                            <li>Тип резки: сухая, мокрая</li>
-                            <li>
-                                Цена всего <strong style="color:red">2999 руб</strong>.
+                                Цена всего <strong style="color:red">18 700 руб</strong>.
                             </li>
                         </ul>
                         <div class="slide-button">
@@ -30,20 +29,19 @@
             </div>
             <div class="slide">
                 <div class="slide-content container">
-                    <img src="{{ asset('/img/slider/slide2.jpg') }}" alt="">
-                    <div class="description-container" style="background-image:url('{{ asset('/img/slider/slidebg2.jpg') }}')">
+                    <img src="{{ asset('/img/slider/slide2.png') }}" alt="">
+                    <div class="description-container" style="background-image:url('{{ asset('/img/slider/slidebg1.jpg') }}')">
                         <div class="slide-layer"></div>
-                        <ul class="description">
-                            <li >                         
-                               <strong>Диск алмазный (БЕТОН):</strong>                                
+                       <ul class="description">
+                            <li >                              
+                               <strong> REAL MIG 160 (N24001N)</strong>                              
                             </li>
+                            <li>- регулировка индуктивности;</li>
+                            <li> - смена полярности, сварка порошковой проволокой;</li>
+                            <li>- сварка алюминия;</li>
+                            <li>- регулировка индуктивности; </li>
                             <li>
-                                Посадочное отверстие: 25,4 мм
-                            </li>
-                            <li>Высота алмазной кромки: 7 мм</li>
-                            <li>Тип резки: сухая, мокрая</li>
-                            <li>
-                                Цена всего: <strong style="color:red">2999 руб</strong>.
+                                Цена всего <strong style="color:red">25 700 руб</strong>.
                             </li>
                         </ul>
                         <div class="slide-button">
@@ -55,23 +53,41 @@
             <div class="slide">
                 <div class="slide-content container">
                     <img src="{{ asset('/img/slider/slide3.jpg') }}" alt="">
-                    <div class="description-container" style="background-image:url('{{ asset('/img/slider/slidebg3.jpg') }}')">
+                    <div class="description-container" style="background-image:url('{{ asset('/img/slider/slidebg2.jpg') }}')">
                         <div class="slide-layer"></div>
-                        <ul class="description">
-                           <li >                                
-                               <strong>Диск алмазный (БЕТОН):</strong>                               
+                    <ul class="description">
+                            <li >                              
+                               <strong> Solaris MULTIMIG-245</strong>                              
                             </li>
+                            <li>- регулировка индуктивности;</li>
+                           <li> - смена полярности, сварка порошковой проволокой;</li>
+                            <li>- сварка алюминия;</li>
+                            <li>- регулировка индуктивности; </li>
                             <li>
-                                Посадочное отверстие: 25,4 мм
+                                Цена всего <strong style="color:red">25 999 руб</strong>.
                             </li>
-                            <li>
-                                Высота алмазной кромки: 7 мм
+                        </ul>
+                        <div class="slide-button">
+                            Подробнее
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-content container">
+                    <img src="{{ asset('/img/slider/slide4.jpg') }}" alt="">
+                    <div class="description-container" style="background-image:url('{{ asset('/img/slider/slidebg2.jpg') }}')">
+                        <div class="slide-layer"></div>
+                    <ul class="description">
+                            <li >                              
+                               <strong> Solaris MULTIMIG-228 (MIG-MMA-TIG) </strong>                              
                             </li>
+                            <li>- регулировка индуктивности;</li>
+                           <li> - смена полярности, сварка порошковой проволокой;</li>
+                            <li>- сварка алюминия;</li>
+                            <li>- регулировка индуктивности; </li>
                             <li>
-                                Тип резки: сухая, мокрая
-                            </li>
-                            <li>
-                                Цена всего: <strong style="color:red">5467 руб</strong>.
+                                Цена всего <strong style="color:red">25 999 руб</strong>.
                             </li>
                         </ul>
                         <div class="slide-button">
@@ -97,7 +113,7 @@
                         <div class="product-description">
                             
                             <span class="description">
-                            {{$product->details}}
+                            {{str_limit($product->details, 130, ' ...')}}
                             </span>
                         </div>
                         <div class="product-price">

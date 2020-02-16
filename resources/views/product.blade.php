@@ -31,7 +31,7 @@
           <ul class="categories-list">
             @foreach ($categories as $category)
                   <li class="categories-list-item sub-menu" data-slug="diskalmazbur">
-                      <a class="main-category-menu-item">
+                      <a href="{{ route('shop.index', ['category' => $category->slug]) }}" class="main-category-menu-item">
                     {{ $category->name }}
                 </a>
                   @if($category->sub->count())                  
@@ -45,11 +45,11 @@
             <div class="single-product">
                 <div class="product-images">
                     <div class="product-section-image">
-                        <img src="{{ productImage($product->image) }}" alt="product" class="active" id="currentImage">
+                        <img src="{{ productImage($product->image) }}" alt="{{$product->name}}" class="active" id="currentImage">
                     </div>
                     <div class="product-section-images">
                         <div class="product-section-thumbnail selected">
-                            <img src="{{ productImage($product->image) }}" alt="product">
+                            <img src="{{ productImage($product->image) }}" alt="{{$product->name}}">
                         </div>
                         @if ($product->images)                    
                           @foreach (json_decode($product->images, true) as $image)

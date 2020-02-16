@@ -23,30 +23,7 @@
         @endif
     </div>
     <div class="catalog-page common-catalog-page">
-      <div class="side-bar">
-          <div class="categories-title">
-              Фильтры:
-          </div>
-          <form class="filter">
-              <div class="checkbox-container">
-                  <label class="checkbox-label">110-120мм
-                      <input type="checkbox" checked="checked">
-                      <span class="checkmark"></span>
-                  </label>
-              </div>
-              <div class="checkbox-container">
-                  <label class="checkbox-label">120-150мм
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                  </label>
-              </div>
-              <div class="checkbox-container">
-                  <label class="checkbox-label">150-200мм
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                  </label>
-              </div>
-          </form>
+      <div class="side-bar">          
 
           <div class="categories-title">
               Категории:
@@ -54,7 +31,7 @@
           <ul class="categories-list">
             @foreach ($categories as $category) 
               <li class="categories-list-item sub-menu" data-slug="{{$category -> slug}}">
-                <a class="main-category-menu-item">
+                <a href="{{ route('shop.index', ['category' => $category->slug]) }}" class="main-category-menu-item">
                     {{ $category->name }}
                 </a>
                   @if($category->sub->count())                  

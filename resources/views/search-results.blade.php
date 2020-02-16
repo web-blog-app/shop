@@ -33,17 +33,16 @@
             <thead>
                 <tr>
                     <th>Назвавние</th>
-                    <th>Подробности</th>
-                    <th>Описание</th>
+                    <th>Подробности</th>                    
                     <th class="search-price">Цена</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($products as $product)
-                    <tr>
+                    <tr>  <td>{{ $product->image
+                     }}             </td>  
                         <th><a href="{{ route('shop.show', $product->slug) }}">{{ $product->name }}</a></th>
-                        <td>{{ $product->details }}</td>
-                        <td>{{ str_limit($product->description, 80) }}</td>
+                        <td>{{ $product->details }}</td>                        
                         <td class="search-price">{{ $product->presentPrice() }}</td>
                     </tr>
                 @endforeach
