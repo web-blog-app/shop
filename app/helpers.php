@@ -19,7 +19,7 @@ function setActiveCategory($category, $output = 'active')
 
 function productImage($path)
 {
-    return  'http://localhost/xxx/storage/app/public/'.$path ;
+   return $path ? asset('storage/app/public/'.$path) : asset('img/not-found.jpg');
 }
 
 function getNumbers()

@@ -63,12 +63,12 @@ class CartController extends Controller
         ]);
 
         if ($validator->fails()) {
-            session()->flash('errors', collect(['Quantity must be between 1 and 5.']));
+            session()->flash('errors', collect(['Количество должно быть от 1 до 5.']));
             return response()->json(['success' => false], 400);
         }
 
         if ($request->quantity > $request->productQuantity) {
-            session()->flash('errors', collect(['We currently do not have enough items in stock.']));
+            session()->flash('errors', collect(['В настоящее время у нас недостаточно товаров на складе.']));
             return response()->json(['success' => false], 400);
         }
 

@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'Thank You')
+@section('title', 'Спасибо за покупку')
 
 @section('extra-css')
 
@@ -16,7 +16,7 @@
         <p>В ближайшее время с вами свяжется наш менеджер</p>
         <div class="spacer"></div>
         <div>
-            <a href="{{ url('/') }}" class="button-primary cart-button">Вернуться в Каталог</a>
+            <a href="{{ url('/shop') }}" class="button-primary cart-button">Вернуться в Каталог</a>
         </div>
     </div>
 

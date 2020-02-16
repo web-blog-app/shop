@@ -18,7 +18,7 @@
                             <li>- полуавтоматическая и ручная дуговая сварка;</li>
                             <li>- режим точечной сварки от 0.1 до 10 секунд; </li>
                             <li>
-                                Цена всего <strong style="color:red">18 700 руб</strong>.
+                                Цена: <strong style="color:red">18 700 руб</strong>.
                             </li>
                         </ul>
                         <div class="slide-button">
@@ -41,7 +41,7 @@
                             <li>- сварка алюминия;</li>
                             <li>- регулировка индуктивности; </li>
                             <li>
-                                Цена всего <strong style="color:red">25 700 руб</strong>.
+                                Цена: <strong style="color:red">25 700 руб</strong>.
                             </li>
                         </ul>
                         <div class="slide-button">
@@ -64,7 +64,7 @@
                             <li>- сварка алюминия;</li>
                             <li>- регулировка индуктивности; </li>
                             <li>
-                                Цена всего <strong style="color:red">25 999 руб</strong>.
+                                Цена: <strong style="color:red">25 999 руб</strong>.
                             </li>
                         </ul>
                         <div class="slide-button">
@@ -87,7 +87,7 @@
                             <li>- сварка алюминия;</li>
                             <li>- регулировка индуктивности; </li>
                             <li>
-                                Цена всего <strong style="color:red">25 999 руб</strong>.
+                                Цена: <strong style="color:red">25 999 руб</strong>.
                             </li>
                         </ul>
                         <div class="slide-button">
