@@ -117,7 +117,7 @@
 
                 <div class="checkout-totals">
                     <div class="checkout-totals-left">
-                        Subtotal <br>
+                        Итого <br>
                         @if (session()->has('coupon'))
                             Discount ({{ session()->get('coupon')['name'] }}) :
                             <br>

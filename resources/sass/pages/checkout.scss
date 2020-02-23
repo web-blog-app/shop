@@ -7,9 +7,18 @@ h1.checkout-heading {
   font-weight: 900;
   padding: 0 45px;
 
+  @media (max-width: $screen-xs-max) {
+    padding: 0 10px;
+  }
+
   .checkout-table-container {
     font-size: 24px;
     max-width: 80%;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 18px;
+      max-width: 100%;
+    }
 
     .checkout-totals-total {
       color: red;
