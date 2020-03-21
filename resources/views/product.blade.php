@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'Товар')
+@section('title', "$product->name")
 
 
 @section('content')
@@ -30,13 +30,17 @@
           </div>
           <ul class="categories-list">
             @foreach ($categories as $category)
-                  <li class="categories-list-item sub-menu" data-slug="diskalmazbur">
-                      <a href="{{ route('shop.index', ['category' => $category->slug]) }}" class="main-category-menu-item">
+                    <li class="categories-list-item sub-menu" data-slug="{{$category -> slug}}">             	
+              	@if(!$category->sub->count())
+                <a href="{{ route('shop.index', ['category' => $category->slug]) }}" class="main-category-menu-item">
                     {{ $category->name }}
                 </a>
-                  @if($category->sub->count())                  
-                   @include('partials.show', ['categories' => $category->sub])
-                  @endif
+                @else
+                <a class="main-category-menu-item">
+                    {{ $category->name }}                   
+                </a>
+                @include('partials.show', ['categories' => $category->sub])
+                @endif                 
               </li>
               @endforeach       
       </div>

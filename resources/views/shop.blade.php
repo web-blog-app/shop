@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'Товар')
+@section('title', 'Магазин')
 
 
 @section('content')
@@ -30,22 +30,25 @@
           </div>
           <ul class="categories-list">
             @foreach ($categories as $category) 
-              <li class="categories-list-item sub-menu" data-slug="{{$category -> slug}}">
+                <li class="categories-list-item sub-menu" data-slug="{{$category -> slug}}">             	
+              	@if(!$category->sub->count())
                 <a href="{{ route('shop.index', ['category' => $category->slug]) }}" class="main-category-menu-item">
                     {{ $category->name }}
                 </a>
-                  @if($category->sub->count())                  
-                   @include('partials.show', ['categories' => $category->sub])
-                  @endif
+                @else
+                <a class="main-category-menu-item">
+                    {{ $category->name }}                   
+                </a>
+                @include('partials.show', ['categories' => $category->sub])
+                @endif                 
               </li>
-              @endforeach
+             @endforeach
           </ul>
       </div>
 
       <div class="products-section">
           <span class="go-back-button">Назад</span>
-          <div class="mobile-shop-controls">
-              <button type="button" class="btn open-filters btn-primary">Фильтры</button>
+          <div class="mobile-shop-controls">              
               <button type="button" class="btn open-categories btn-info">Категории</button>
           </div>
           <div class="sort-menu">
@@ -87,38 +90,6 @@
               </div>
 
           </div>
-        <div class="mobile-filters-menu">
-            <div class="close-btn close-filters">
-                <div class="close-cross-line-left">
-                    <div class="close-cross-line-right"></div>
-                </div>
-            </div>
-            <div class="mobile-shop-menu-content">
-                <div class="categories-title">
-                    Фильтры:
-                </div>
-                <form class="filter">
-                    <div class="checkbox-container">
-                        <label class="checkbox-label">110-120мм
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
-                    <div class="checkbox-container">
-                        <label class="checkbox-label">120-150мм
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
-                    <div class="checkbox-container">
-                        <label class="checkbox-label">150-200мм
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
-                </form>
-            </div>
-        </div>
         <div class="mobile-categories-menu">
             <div class="close-btn close-categories">
                 <div class="close-cross-line-left">
@@ -130,14 +101,18 @@
             </div>
             <ul class="categories-list">
                 @foreach ($categories as $category)
-                    <li class="categories-list-item sub-menu" data-slug="{{$category -> slug}}">
-                        <a class="main-category-menu-item">
-                            {{ $category->name }}
-                        </a>
-                        @if($category->sub->count())
-                            @include('partials.show', ['categories' => $category->sub])
-                        @endif
-                    </li>
+                      <li class="categories-list-item sub-menu" data-slug="{{$category -> slug}}">             	
+              	@if(!$category->sub->count())
+                <a href="{{ route('shop.index', ['category' => $category->slug]) }}" class="main-category-menu-item">
+                    {{ $category->name }}
+                </a>
+                @else
+                <a class="main-category-menu-item">
+                    {{ $category->name }}                   
+                </a>
+                @include('partials.show', ['categories' => $category->sub])
+                @endif                 
+              </li>
                 @endforeach
             </ul>
         </div>

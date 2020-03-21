@@ -1,6 +1,6 @@
-@extends('layout')
+@extends('layouts.layout')
 
-@section('title', 'Reset Password')
+@section('title', 'Сброс пароля')
 
 @section('content')
 <div class="container">
@@ -19,7 +19,7 @@
                 </ul>
             </div>
             @endif
-            <h2>Reset Password</h2>
+            <h2>Сброс пароля</h2>
             <div class="spacer"></div>
             <form class="form-horizontal" method="POST" action="{{ route('password.request') }}">
                 {{ csrf_field() }}
@@ -33,19 +33,17 @@
                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password" required>
 
                 <div class="login-container">
-                    <button type="submit" class="auth-button">Reset Password</button>
+                    <button type="submit" class="auth-button">Сброс пароля</button>
                 </div>
 
             </form>
         </div>
         <div class="auth-right">
-            <h2>Reset Password Information</h2>
+            <h2>Сброс пароля</h2>
             <div class="spacer"></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel dicta obcaecati exercitationem ut atque inventore
-                cum. Magni autem error ut!</p>
+            <p>Дважды введите новый пароль.</p>
             <div class="spacer"></div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel accusantium quasi necessitatibus rerum fugiat eos,
-                a repudiandae tempore nisi ipsa delectus sunt natus!</p>
+            <p>Нажмите Изменить пароль.</p>
         </div>
     </div>
 </div>

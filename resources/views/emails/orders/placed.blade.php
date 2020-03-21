@@ -1,32 +1,32 @@
 @component('mail::message')
-# Order Received
+# Заказ принят 
 
-Thank you for your order.
+Спасибо за ваш заказ.
 
-**Order ID:** {{ $order->id }}
+**Номер заказа:** {{ $order->id }}
 
-**Order Email:** {{ $order->billing_email }}
+**Электронная почта заказа:** {{ $order->billing_email }}
 
-**Order Name:** {{ $order->billing_name }}
+**Название заказа:** {{ $order->billing_name }}
 
-**Order Total:** ${{ round($order->billing_total / 100, 2) }}
+**Сумма заказа:** ${{ round($order->billing_total, 2) }}
 
-**Items Ordered**
+**Заказанные товары**
 
 @foreach ($order->products as $product)
-Name: {{ $product->name }} <br>
-Price: ${{ round($product->price / 100, 2)}} <br>
-Quantity: {{ $product->pivot->quantity }} <br>
+Название: {{ $product->name }} <br>
+Цена: {{ round($product->price , 2)}} руб. <br>
+Количество: {{ $product->pivot->quantity }} <br>
 @endforeach
 
-You can get further details about your order by logging into our website.
+Вы можете получить более подробную информацию о вашем заказе, зайдя на наш сайт.
 
 @component('mail::button', ['url' => config('app.url'), 'color' => 'green'])
-Go to Website
+Перейти на сайт
 @endcomponent
 
-Thank you again for choosing us.
+Еще раз спасибо за то, что выбрали нас.
 
-Regards,<br>
+С уважением,
 {{ config('app.name') }}
 @endcomponent

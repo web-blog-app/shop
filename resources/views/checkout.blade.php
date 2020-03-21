@@ -67,29 +67,8 @@
                     <div class="spacer"></div>
 
                     <button type="submit" id="complete-order" class="cart-button button-primary full-width">Завершить заказ</button>
-                </form>
-
-                @if ($paypalToken)
-                    <div class="mt-32">или</div>
-                    <div class="mt-32">
-                        <h2>Оплата с PayPal</h2>
-
-                        <form method="post" id="paypal-payment-form" action="{{ route('checkout.paypal') }}">
-                            @csrf
-                            <section>
-                                <div class="bt-drop-in-wrapper">
-                                    <div id="bt-dropin"></div>
-                                </div>
-                            </section>
-
-                            <input id="nonce" name="payment_method_nonce" type="hidden" />
-                            <button class="button-primary" type="submit"><span>Оплата с PayPal</span></button>
-                        </form>
-                    </div>
-                @endif
+                </form>              
             </div>
-
-
 
             <div class="checkout-table-container">
                 <h2>Ваш заказ</h2>
@@ -117,9 +96,9 @@
 
                 <div class="checkout-totals">
                     <div class="checkout-totals-left">
-                        Итого <br>
+                        Промежуточный итог <br>
                         @if (session()->has('coupon'))
-                            Discount ({{ session()->get('coupon')['name'] }}) :
+                            Скидка ({{ session()->get('coupon')['name'] }}) :
                             <br>
                             <hr>
                             Новая сумма <br>

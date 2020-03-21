@@ -18,7 +18,7 @@ class Category extends Model
     }
 
       public static function getCategories() {        
-        $arr = self::orderBy('name')->get();
+        $arr = self::orderBy('created_at')->get();
 
         return self::buildTree($arr, 0);
 }

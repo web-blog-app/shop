@@ -4,7 +4,7 @@ use Carbon\Carbon;
 
 function presentPrice($price)
 {
-    return number_format( $price/100, 0, '.', ' ').' руб';
+    return number_format( $price, 0, '.', ' ').' руб';
 }
 
 function presentDate($date)
@@ -19,7 +19,7 @@ function setActiveCategory($category, $output = 'active')
 
 function productImage($path)
 {
-    return  'http://localhost/xxx/storage/app/public/'.$path ;
+   return $path ? asset('storage/app/public/'.$path) : asset('img/not-found.webp');
 }
 
 function getNumbers()

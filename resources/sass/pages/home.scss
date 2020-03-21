@@ -4,7 +4,7 @@
 
     .slide {
         color: $c-slide-color;
-        max-height: 490px;
+        max-height: 600px;
 
         @media (max-width: $screen-xs-max) {
             max-height: none;
@@ -15,8 +15,13 @@
             padding-left: 150px;
             padding-top: 25px;
             padding-right: 25px;
-            font-size: 40px;
-
+            font-size: 32px;
+            strong{
+                font-size: 35px;
+            }
+            .price{
+                color: red;
+            }
             @media (max-width: $screen-md-max) {
                 font-size: 24px;
             }
@@ -59,9 +64,8 @@
         }
 
         img {
-            max-height: 250px;
-            max-width: 50%;
-            margin-left: 250px;
+            max-height: 300px;
+            max-width: 65%;            
 
             @media (max-width: $screen-md-max) {
                 margin-left: 50px;
@@ -378,7 +382,7 @@
 
     &-title {
         padding-bottom: 35px;
-        text-align: left;
+        
     }
 
     &-subtitle {

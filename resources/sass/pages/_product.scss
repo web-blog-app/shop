@@ -120,6 +120,10 @@
 .product-additional-info {
   margin: 25px 0;
   max-width: 80%;
+
+	  @media (max-width: $screen-md-max) {
+	    max-width: 100%;
+	}
 }
 
 .tab-content{
@@ -130,4 +134,10 @@
 
 .tab-content.current{
   display: inherit;
+}
+
+#tab-1 {
+  div, p, span, table {
+    width: 100% !important;
+  }
 }
