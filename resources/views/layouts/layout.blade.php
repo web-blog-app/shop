@@ -10,7 +10,9 @@
 
         <title> @yield('title', '')</title>
 
-        <link href="{{ asset('img/favico.ico') }}" rel="SHORTCUT ICON" />
+        
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+        <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat%7CRoboto:300,400,700" rel="stylesheet">

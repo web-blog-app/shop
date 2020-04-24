@@ -7,9 +7,9 @@
 
 **Электронная почта заказа:** {{ $order->billing_email }}
 
-**Название заказа:** {{ $order->billing_name }}
+**ФИО:** {{ $order->billing_name }}
 
-**Сумма заказа:** ${{ round($order->billing_total, 2) }}
+**Сумма заказа:** {{ round($order->billing_total, 2) }} руб.
 
 **Заказанные товары**
 

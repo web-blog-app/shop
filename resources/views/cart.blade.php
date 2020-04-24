@@ -115,6 +115,7 @@
             <div class="cart-buttons">
                 <a href="{{ route('shop.index') }}" class="button button-secondary">Продолжить покупки</a>
                 <a href="{{ route('checkout.index') }}" class="button-primary cart-button">Оформить заказ</a>
+                <a href="{{ route('checkout.sber') }}" class="button-primary cart-button">Купить в рассочку</a>
             </div>
 
             @else

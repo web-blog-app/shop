@@ -107,7 +107,7 @@
                         </div>
                         <div class="product-button">
                             <a href="{{ route('shop.show', $product->slug) }}">
-                            Купить
+                            Подробнее
                         </a>
                         </div>
                         <div class="wave"></div>
