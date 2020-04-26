@@ -2,6 +2,15 @@
 @section('title', 'A2 Company')
 
 @section('content')
+    <div id="preloader" class="container preloader">
+        <div class="preloader-container">
+            <div class="preloader-item"></div>
+            <div class="preloader-item"></div>
+            <div class="preloader-item"></div>
+            <div class="preloader-item"></div>
+            <div class="preloader-item"></div>
+        </div>
+    </div>
     <div class="application">
         <div class="main-slider">
             <div class="slide">
@@ -102,6 +111,7 @@
                             {{str_limit($product->details, 130, ' ...')}}
                             </span>
                         </div>
+                        <p class="card-logo"><img class="sber-logo-img" src="{{ asset('/img/logo-sber.png') }}" alt="sberbank"></p>
                         <div class="product-price">
                             {{ $product->presentPrice() }}
                         </div>
@@ -218,4 +228,12 @@
             </div>
         </div>
     </div> <!-- end #app -->
+    <script>
+      window.onload = function() {
+        setTimeout(function () {
+          var preloader = document.getElementById('preloader');
+          preloader.parentNode.removeChild(preloader);
+        }, 1000);
+      };
+    </script>
 @endsection

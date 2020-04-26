@@ -163,8 +163,4 @@ $(document).ready(function(){
   $('.go-back-button').on('click', function () {
     window.history.back();
   });
-
-  setTimeout(function () {
-    $('.preloader').remove();
-  }, 1000);
 });

@@ -26,15 +26,6 @@
 
 
 <body class="@yield('body-class', '')">
-    <div class="container preloader">
-        <div class="preloader-container">
-            <div class="preloader-item"></div>
-            <div class="preloader-item"></div>
-            <div class="preloader-item"></div>
-            <div class="preloader-item"></div>
-            <div class="preloader-item"></div>
-        </div>
-    </div>
     @include('partials.nav')
     <div class="wrapper">
 
@@ -47,50 +38,17 @@
         </div>
     </div>
     @yield('extra-js')
-
-    <div type="button" class="callback-bt" data-micromodal-trigger="modal-call">
-        <div class="text-call">
-            <i class="fa fa-phone"></i>
-            <span>Заказать<br>звонок</span>
-        </div>
-    </div>
-    <div class="modal micromodal-bounce" id="modal-call" aria-hidden="true">
-        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-call-title" aria-describedby="modal-call-content">
-                <div role="document">
-                    <header class="modal__header">
-                        <h3 class="modal__title" id="modal-call-title">
-                            Заказать обратный звонок
-                        </h3>
-                        <div class="form-general-error form-error">
-                            Ошибка сервера. Попробуйте позже.
-                        </div>
-                    </header>
-                    <main class="modal__content" id="modal-call-content">
-                        <form novalidate class="form call-form">
-                            <div class="form-group">
-                                <div class="form-error">Некоректно введено имя</div>
-                                <label class="form-label" for="name">Имя</label>
-                                <input maxlength="60" data-validate="text" type="text" id="name" class="form-input">
-                            </div>
-                            <div class="form-group">
-                                <div class="form-error">Некоректно введен номер</div>
-                                <label class="form-label" for="phone">Номер телефона</label>
-                                <input data-validate="phone" type="text" id="phone" class="form-input">
-                            </div>
-                            <footer class="modal__footer">
-                                <button type="submit" class="modal__btn submit-button modal__btn-primary">Отправить</button>
-                                <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Закрыть</button>
-                            </footer>
-                        </form>
-                        <div class="form-success-msg">
-                            Спасибо! <br> Мы обязательно свяжемся с вами!
-                        </div>
-                    </main>
-                </div>
-            </div>
-        </div>
-    </div>
 </body>
     <script src="{{ asset('js/app.js') }}"></script>
+    <script>
+      var _emv = _emv || [];
+      _emv['campaign'] = '843f61d9c31569e5f15cc640';
+
+
+      (function() {
+        var em = document.createElement('script'); em.type = 'text/javascript'; em.async = true;
+        em.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'leadback.ru/js/leadback.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(em, s);
+      })();
+    </script>
 </html>

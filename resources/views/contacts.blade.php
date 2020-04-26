@@ -34,6 +34,11 @@
                     </p>
                     
                 </div>
+                <div class="common-contacts">
+                    <p>Реквизиты:</p>
+                    <p>ИП Иванов Иван Иванович.</p>
+                    <p>ИНН 7778644521 / ОГРНИП 1076564644123.</p>
+                </div>
             </div>
         </div>
         <div class="map container">

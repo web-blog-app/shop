@@ -77,6 +77,10 @@
                       <button type="submit" class="button product-section-button">Добавить в корзину</button>
                     </form>
                     @endif
+                    <p class="logo-container" >
+                    <img class="sber-logo-img" src="{{ asset('/img/logo-sber.png') }}" alt="sberbank">
+                        Вы можете купить данный товар в кредит без переплат!
+                    </p>
                 </div>
                 <div class="product-additional-info">
                     <ul class="tabs">

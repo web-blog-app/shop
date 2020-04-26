@@ -113,9 +113,17 @@
             </div> <!-- end cart-totals -->
 
             <div class="cart-buttons">
-                <a href="{{ route('shop.index') }}" class="button button-secondary">Продолжить покупки</a>
-                <a href="{{ route('checkout.index') }}" class="button-primary cart-button">Оформить заказ</a>
-                <a href="{{ route('checkout.sber') }}" class="button-primary cart-button">Купить в рассочку</a>
+                <a href="{{ route('shop.index') }}" class="button cart-button reverse action-button button-secondary">Продолжить покупки</a>
+                <a href="{{ route('checkout.index') }}" class="button-primary action-button cart-button">Оформить заказ</a>
+            </div>
+
+            <div class="loan-section">
+                <p class="logo-container" >
+                    <img class="sber-logo-img" src="{{ asset('/img/logo-sber.png') }}" alt="sberbank">
+                </p>
+                <p>Вы также можете оформить рассрочку на покупку </p>
+
+                <a href="{{ route('checkout.sber') }}" class="button-loan cart-button"><img class="sber-logo-img" src="{{ asset('/img/button-sber.png') }}" alt="sberbank"></a>
             </div>
 
             @else
