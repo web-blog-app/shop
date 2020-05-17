@@ -149,7 +149,6 @@ $(document).ready(function(){
   $('.sub-menu ul').hide();
   $(".sub-menu a").click(function () {
     $(this).parent(".sub-menu").children("ul").slideToggle("100");
-    // $(this).find(".right").toggleClass("fa-caret-up fa-caret-down");
   });
 
   const searchObject = parseQuery(document.URL);
@@ -162,5 +161,32 @@ $(document).ready(function(){
 
   $('.go-back-button').on('click', function () {
     window.history.back();
+  });
+
+  var spinner = $('.map-container').children('.loader');
+  var check_if_load = false;
+
+  function loadScript(){
+    var script = document.createElement("script");
+    // This script has a callback function that will run when the script has
+    // finished loading.
+    script.async = true;
+    script.defer = true;
+    script.src = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A37fe8f99a90c2e486d278811fd39136476d50ab57caf3b63b7acf8ab170e552c&amp;width=100%25&amp;height=520&amp;lang=ru_RU&amp;";
+    script.type = "text/javascript";
+    document.getElementById("map-container").appendChild(script);
+
+    script.onload = function () {
+      spinner.removeClass('is-active');
+    }
+  }
+
+  document.getElementById('map-container').addEventListener('mouseenter click', function(){
+    if (!check_if_load) {
+      check_if_load = true;
+      spinner.addClass('is-active');
+
+      loadScript();
+    }
   });
 });
