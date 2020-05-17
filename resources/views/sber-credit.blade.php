@@ -30,8 +30,9 @@
             <div>
                 <form action="{{ route('checkout.sber') }}" method="POST" id="payment-form">
                     {{ csrf_field() }}
-                    <h2>Данные покупателя</h2>
-
+                    <h2 class="form-title">Заполните форму и система перенаправит вас для перехода к оформлению кредита <span class="sberbank-logo"><img class="sber-logo-img" src="{{ asset('/img/button-sber.png') }}" alt="sberbank"></span></h2>
+                    <h3 class="form-title">С условиями предоставления кредита без переплаты можно ознакомиться по <a target="_blank" class="sber-color" href="https://www.pokupay.ru/credit_terms">ссылке</a></h3>
+                    @csrf
                     <div class="form-group">
                         <label for="email">Адрес электронной почты</label>
                         @if (auth()->user())
@@ -63,10 +64,11 @@
                             <input type="text" class="form-control" id="phone" name="phone" value="{{ old('phone') }}" required>
                         </div>
                     </div> <!-- end half-form -->
+                     {!! htmlFormSnippet() !!}  
 
                     <div class="spacer"></div>
 
-                    <button type="submit" id="complete-order" class="cart-button button-primary full-width">Завершить заказ</button>
+                    <button type="submit" id="complete-order" class="sber-button action-button cart-button button-primary full-width">Завершить заказ</button>
                 </form>              
             </div> 
 

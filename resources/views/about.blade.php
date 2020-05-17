@@ -1,5 +1,6 @@
 @extends('layouts.layout')
 @section('title', 'О нас - A2 Company')
+@section('description', setting('site.descriptionAbout'))
 
 @section('content')
     <div class="about">

@@ -24,6 +24,7 @@
 
             <form method="POST" action="{{ route('register') }}">
                 {{ csrf_field() }}
+                 @csrf
 
                 <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Имя" required autofocus>
 
@@ -33,6 +34,7 @@
 
                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Повторите пароль"
                     required>
+                {!! htmlFormSnippet() !!}
 
                 <div class="login-container">
                     <button type="submit" class="auth-button">Создать аккаунт</button>

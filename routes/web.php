@@ -20,7 +20,7 @@ Route::post('/coupon', 'CouponsController@store')->name('coupon.store');
 Route::delete('/coupon', 'CouponsController@destroy')->name('coupon.destroy');
 
 Route::get('/checkout', 'CheckoutController@index')->name('checkout.index')->middleware('auth');
-Route::get('/sber-credit', 'CheckoutController@sberCredit')->name('checkout.sberCredit')->middleware('auth');
+Route::get('/sber-credit', 'CheckoutController@sberCredit')->name('checkout.sberCredit');
 Route::post('/checkout', 'CheckoutController@store')->name('checkout.store');
 Route::post('/sber-credit', 'CheckoutController@sberCheckout')->name('checkout.sber');
 

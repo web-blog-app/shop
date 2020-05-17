@@ -1,7 +1,17 @@
 @extends('layouts.layout')
 @section('title', 'A2 Company')
+@section('description', setting('site.description'))
 
 @section('content')
+    <div id="preloader" class="container preloader">
+        <div class="preloader-container">
+            <div class="preloader-item"></div>
+            <div class="preloader-item"></div>
+            <div class="preloader-item"></div>
+            <div class="preloader-item"></div>
+            <div class="preloader-item"></div>
+        </div>
+    </div>
     <div class="application">
         <div class="main-slider">
             <div class="slide">
@@ -102,6 +112,7 @@
                             {{str_limit($product->details, 130, ' ...')}}
                             </span>
                         </div>
+                        <p class="card-logo"><img class="sber-logo-img" src="{{ asset('/img/logo-sber.png') }}" alt="sberbank"></p>
                         <div class="product-price">
                             {{ $product->presentPrice() }}
                         </div>
@@ -142,7 +153,7 @@
                     </div>
                 </div>
                 <div class="map-container">
-                    <script type="text/javascript" charset="utf-8" defer src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A37fe8f99a90c2e486d278811fd39136476d50ab57caf3b63b7acf8ab170e552c&amp;width=100%25&amp;height=520&amp;lang=ru_RU&amp;"></script>
+                    <script type="text/javascript" charset="utf-8" async defer src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A37fe8f99a90c2e486d278811fd39136476d50ab57caf3b63b7acf8ab170e552c&amp;width=100%25&amp;height=520&amp;lang=ru_RU&amp;"></script>
                 </div>
             </div>
         </div>
@@ -184,38 +195,13 @@
                 </div>
             </div>
         </div>
-
-        <div class="feedback-section">
-            <div class="title">Отзывы о нас</div>
-            <div class="feedback-slider">
-                <div class="feedback-slide">
-                    <div class="feedback-slide-content container">
-                        <div class="feedback-image" style="background-image:url('{{ asset('/img/slider/feedback.webp') }}')"></div>
-                        <div class="feedback-description-container">
-                            Заказывал шуруповерт Sturm!, договорились с менеджером, обсудили детали сделки. Доставили до подъезда.
-                            Был нюанс: осевое биение патрона шуруповерта. Все без проблем заменили. Спасибо за Ваш труд.
-                        </div>
-                    </div>
-                </div>
-                <div class="feedback-slide">
-                    <div class="feedback-slide-content container">
-                        <div class="feedback-image" style="background-image:url('{{ asset('/img/slider/feedback1.webp') }}')"></div>
-                        <div class="feedback-description-container">
-                            Заказывал шуруповерт Sturm!, договорились с менеджером, обсудили детали сделки. Доставили до подъезда.
-                            Был нюанс: осевое биение патрона шуруповерта. Все без проблем заменили. Спасибо за Ваш труд.
-                        </div>
-                    </div>
-                </div>
-                <div class="feedback-slide">
-                    <div class="feedback-slide-content container">
-                        <div class="feedback-image" style="background-image:url('{{ asset('/img/slider/feedback2.webp') }}')"></div>
-                        <div class="feedback-description-container">
-                            Заказывал шуруповерт Sturm!, договорились с менеджером, обсудили детали сделки. Доставили до подъезда.
-                            Был нюанс: осевое биение патрона шуруповерта. Все без проблем заменили. Спасибо за Ваш труд.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div> <!-- end #app -->
+    <script>
+      window.onload = function() {
+        setTimeout(function () {
+          var preloader = document.getElementById('preloader');
+          preloader.parentNode.removeChild(preloader);
+        }, 1000);
+      };
+    </script>
 @endsection

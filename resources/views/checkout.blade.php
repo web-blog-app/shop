@@ -30,8 +30,9 @@
             <div>
                 <form action="{{ route('checkout.store') }}" method="POST" id="payment-form">
                     {{ csrf_field() }}
-                    <h2>Данные покупателя</h2>
 
+                    <h2>Данные покупателя</h2>
+                    @csrf
                     <div class="form-group">
                         <label for="email">Адрес электронной почты</label>
                         @if (auth()->user())
@@ -63,6 +64,7 @@
                             <input type="text" class="form-control" id="phone" name="phone" value="{{ old('phone') }}" required>
                         </div>
                     </div> <!-- end half-form -->
+                     {!! htmlFormSnippet() !!}
 
                     <div class="spacer"></div>
 

@@ -31,6 +31,7 @@ class CheckoutRequest extends FormRequest
             'address' => 'required',
             'city' => 'required', 
             'phone' => 'required',
+            'g-recaptcha-response' => 'recaptcha',
         ];
     }
 

@@ -141,3 +141,13 @@
     width: 100% !important;
   }
 }
+
+.logo-container {
+  margin: 10px 0;
+
+  .sber-logo-img {
+    max-width: 250px;
+    margin-bottom: 10px;
+    display: block;
+  }
+}
