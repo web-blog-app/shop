@@ -38,26 +38,13 @@
                         @if (auth()->user())
                             <input type="email" class="form-control" id="email" name="email" value="{{ auth()->user()->email }}" readonly>
                         @else
-                            <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" required>
+                            <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" >
                         @endif
                     </div>
                     <div class="form-group">
                         <label for="name">Имя</label>
                         <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" required>
                     </div>
-                    <div class="form-group">
-                            <label for="city">Город</label>
-                            <input type="text" class="form-control" id="city" name="city" value="{{ old('city') }}" required>
-                        </div>                   
-
-                    <div class="half-form"> 
-                    <div class="form-group">
-                        <label for="address">Адрес</label>
-                        <input type="text" class="form-control" id="address" name="address" value="{{ old('address') }}" required>
-                    </div>                       
-                        
-                    </div> <!-- end half-form -->
-
                     <div class="half-form">                        
                         <div class="form-group">
                             <label for="phone">Телефон</label>

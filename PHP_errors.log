@@ -1,0 +1,28 @@
+[14-May-2020 20:32:32 Europe/Moscow] PHP Notice:  Undefined variable: contact_tov in /home/s/s78898er/solaris/public_html/multimig225/send1.php on line 12
+[14-May-2020 20:32:36 Europe/Moscow] PHP Notice:  Undefined variable: contact_tov in /home/s/s78898er/solaris/public_html/multimig225/send1.php on line 12
+[17-May-2020 23:08:00 Europe/Moscow] PHP Parse error:  syntax error, unexpected '' . руб'' (T_CONSTANT_ENCAPSED_STRING), expecting ';' in /home/s/s78898er/solaris/public_html/app/helpers.php on line 7
+[17-May-2020 23:08:04 Europe/Moscow] PHP Parse error:  syntax error, unexpected '' . руб'' (T_CONSTANT_ENCAPSED_STRING), expecting ';' in /home/s/s78898er/solaris/public_html/app/helpers.php on line 7
+[17-May-2020 23:08:10 Europe/Moscow] PHP Parse error:  syntax error, unexpected '' . руб'' (T_CONSTANT_ENCAPSED_STRING), expecting ';' in /home/s/s78898er/solaris/public_html/app/helpers.php on line 7
+[17-May-2020 23:08:30 Europe/Moscow] PHP Parse error:  syntax error, unexpected '' .'' (T_CONSTANT_ENCAPSED_STRING), expecting ';' in /home/s/s78898er/solaris/public_html/app/helpers.php on line 7
+[17-May-2020 23:08:46 Europe/Moscow] PHP Parse error:  syntax error, unexpected '' .'' (T_CONSTANT_ENCAPSED_STRING), expecting ';' in /home/s/s78898er/solaris/public_html/app/helpers.php on line 7
+[17-May-2020 23:08:47 Europe/Moscow] PHP Parse error:  syntax error, unexpected '' .'' (T_CONSTANT_ENCAPSED_STRING), expecting ';' in /home/s/s78898er/solaris/public_html/app/helpers.php on line 7
+[17-May-2020 23:09:09 Europe/Moscow] PHP Parse error:  syntax error, unexpected ''.'' (T_CONSTANT_ENCAPSED_STRING), expecting ';' in /home/s/s78898er/solaris/public_html/app/helpers.php on line 7
+[18-May-2020 10:58:43 Europe/Moscow] PHP Notice:  Undefined variable: contact_tov in /home/s/s78898er/solaris/public_html/multimig226/send1.php on line 12
+[22-May-2020 01:32:49 Europe/Moscow] PHP Notice:  Undefined variable: contact_tov in /home/s/s78898er/solaris/public_html/multimig225/send1.php on line 12
+[10-Jun-2020 21:45:01 Europe/Moscow] PHP Notice:  Undefined variable: contact_tov in /home/s/s78898er/solaris/public_html/multimig227/send1.php on line 12
+[11-Jun-2020 04:58:34 Europe/Moscow] PHP Notice:  Undefined variable: contact_tov in /home/s/s78898er/solaris/public_html/multimig225/send1.php on line 12
+[12-Jun-2020 08:48:00 Europe/Moscow] PHP Notice:  Undefined variable: contact_tov in /home/s/s78898er/solaris/public_html/multimig226/send1.php on line 12
+[15-Jun-2020 16:16:17 Europe/Moscow] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/s/s78898er/solaris/public_html/database.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/s/s78898er/solaris/public_html/database.php on line 16
+[17-Jun-2020 17:37:12 Europe/Moscow] PHP Notice:  Undefined variable: contact_tov in /home/s/s78898er/solaris/public_html/multimig227/send1.php on line 12
+[30-Jun-2020 18:06:59 Europe/Moscow] PHP Notice:  Undefined variable: contact_tov in /home/s/s78898er/solaris/public_html/multimig225/send1.php on line 12
+[03-Jul-2020 15:33:08 Europe/Moscow] PHP Notice:  Undefined variable: contact_tov in /home/s/s78898er/solaris/public_html/multimig226/send1.php on line 12
+[10-Jul-2020 07:22:53 Europe/Moscow] PHP Notice:  Undefined variable: contact_tov in /home/s/s78898er/solaris/public_html/multimig245/send1.php on line 12
+[18-Jul-2020 17:55:35 Europe/Moscow] PHP Notice:  Undefined variable: contact_tov in /home/s/s78898er/solaris/public_html/multimig226/send1.php on line 12
+[24-Jul-2020 20:49:18 Europe/Moscow] PHP Notice:  Undefined variable: contact_tov in /home/s/s78898er/solaris/public_html/multimig225/send1.php on line 12
+[10-Aug-2020 09:56:13 Europe/Moscow] PHP Notice:  Undefined variable: contact_tov in /home/s/s78898er/solaris/public_html/multimig225/send1.php on line 12
+[14-Aug-2020 13:54:51 Europe/Moscow] PHP Notice:  Undefined variable: contact_tov in /home/s/s78898er/solaris/public_html/multimig226/send1.php on line 12
+[14-Aug-2020 21:18:32 Europe/Moscow] PHP Notice:  Undefined variable: contact_tov in /home/s/s78898er/solaris/public_html/multimig226/send1.php on line 12
+[15-Aug-2020 14:15:56 Europe/Moscow] PHP Notice:  Undefined variable: contact_tov in /home/s/s78898er/solaris/public_html/multimig245/send1.php on line 12

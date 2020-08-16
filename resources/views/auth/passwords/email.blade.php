@@ -21,11 +21,12 @@
             <div class="spacer"></div>
             <form action="{{ route('password.email') }}" method="POST">
                 {{ csrf_field() }}
+               
                 <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="Email" required autofocus>
                 <div class="login-container">
                     <button type="submit" class="auth-button">Отправить ссылку для сброса пароля</button>
                 </div>
-
+               
 
             </form>
         </div>
@@ -39,5 +40,4 @@
     </div>
 </div>
 @endsection
-
 

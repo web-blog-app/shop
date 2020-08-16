@@ -24,10 +24,10 @@
 
             <form action="{{ route('login') }}" method="POST">
                 {{ csrf_field() }}
-                
+               
                 <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="Электронный адрес" required autofocus>
                 <input type="password" id="password" name="password" value="{{ old('password') }}" placeholder="Пароль" required>
-                
+               
 
                 <div class="login-container">
                     <button type="submit" class="auth-button">Авторизоваться</button>

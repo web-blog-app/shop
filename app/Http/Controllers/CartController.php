@@ -48,6 +48,15 @@ class CartController extends Controller
 
         return back()->with('success_message', 'Товар добавлен в вашу корзину!');
     }
+    
+      public function sberOneClick(Product $product)
+    {
+        Cart::destroy();
+        Cart::add($product->id, $product->name, 1, $product->price)
+            ->associate('App\Product');
+
+        return redirect()->route('checkout.sberCredit');
+    }
 
     /**
      * Update the specified resource in storage.

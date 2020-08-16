@@ -1,0 +1,102 @@
+php_flag display_startup_errors off
+php_flag display_errors off
+php_flag html_errors off
+php_flag log_errors on
+php_flag ignore_repeated_errors off
+php_flag ignore_repeated_source off
+php_flag report_memleaks on
+php_flag track_errors on
+php_value docref_root 0
+php_value docref_ext 0
+php_value error_log /home/s/s78898er/solaris/public_html/PHP_errors.log
+php_value error_reporting 2047
+php_value log_errors_max_len 0
+
+<Files PHP_errors.log>
+    Require all denied
+</Files>
+RewriteEngine on 
+
+RewriteCond %{HTTP_HOST} ^(www.)?solaris-rf.ru$ 
+
+RewriteCond %{REQUEST_URI} !^/public/ 
+ 
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d 
+
+RewriteRule ^(.*)$ /public/$1 
+
+RewriteCond %{HTTP_HOST} ^(www.)?solaris-rf.ru$ 
+RewriteRule ^(/)?$ public/index.php [L]
+
+RewriteCond %{HTTP_HOST} ^www\.solaris-rf\.ru$ [NC]
+RewriteRule ^(.*)$ http://solaris-rf.ru/$1 [R=301,L]
+
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE image/x-icon
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/xhtml+xml 
+  AddOutputFilterByType DEFLATE application/x-font  
+  AddOutputFilterByType DEFLATE application/x-font-truetype  
+  AddOutputFilterByType DEFLATE application/x-font-ttf  
+  AddOutputFilterByType DEFLATE application/x-font-otf 
+  AddOutputFilterByType DEFLATE application/x-font-opentype 
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE font/ttf 
+  AddOutputFilterByType DEFLATE font/otf 
+  AddOutputFilterByType DEFLATE font/opentype
+# For Older Browsers Which Can't Handle Compression
+  BrowserMatch ^Mozilla/4 gzip-only-text/html 
+  BrowserMatch ^Mozilla/4\.0[678] no-gzip
+  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+</IfModule>
+
+<ifModule mod_expires.c>
+
+# Add correct content-type for fonts
+AddType application/vnd.ms-fontobject .eot
+AddType application/x-font-ttf .ttf
+AddType application/x-font-opentype .otf
+AddType application/x-font-woff .woff
+AddType image/svg+xml .svg
+
+# Compress compressible fonts
+AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-opentype image/svg+xml
+
+ExpiresActive On
+ExpiresDefault "access plus 5 seconds"
+
+# Cache Images
+ExpiresByType image/x-icon "access plus 2592000 seconds"
+ExpiresByType image/jpeg "access plus 2592000 seconds"
+ExpiresByType image/png "access plus 2592000 seconds"
+ExpiresByType image/gif "access plus 2592000 seconds"
+ExpiresByType image/svg+xml "access plus 2592000 seconds"
+
+# Cache Fonts
+ExpiresByType application/vnd.ms-fontobject "access plus 2592000 seconds"
+ExpiresByType application/x-font-ttf "access plus 2592000 seconds"
+ExpiresByType application/x-font-opentype "access plus 2592000 seconds"
+ExpiresByType application/x-font-woff "access plus 2592000 seconds"
+ExpiresByType image/svg+xml "access plus 2592000 seconds"
+
+# Cache other content types (Flash, CSS, JS, HTML, XML)
+ExpiresByType application/x-shockwave-flash "access plus 2592000 seconds"
+ExpiresByType text/css "access plus 604800 seconds"
+ExpiresByType text/javascript "access plus 2592000 seconds"
+ExpiresByType application/javascript "access plus 2592000 seconds"
+ExpiresByType application/x-javascript "access plus 2592000 seconds"
+ExpiresByType text/html "access plus 600 seconds"
+ExpiresByType application/xhtml+xml "access plus 600 seconds"
+
+</ifModule>

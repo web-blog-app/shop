@@ -23,13 +23,11 @@ class CheckoutRequest extends FormRequest
      */
     public function rules()
     {
-        $emailValidation = auth()->user() ? 'required|email' : 'required|email|unique:users';
+        $emailValidation = auth()->user() ? 'email' : 'unique:users';
 
         return [
             'email' => $emailValidation,
             'name' => 'required',
-            'address' => 'required',
-            'city' => 'required', 
             'phone' => 'required',
             'g-recaptcha-response' => 'recaptcha',
         ];
@@ -38,7 +36,7 @@ class CheckoutRequest extends FormRequest
     public function messages()
     {
         return [
-            'email.unique' => 'У вас уже есть аккаунт с этим адресом электронной почты. Пожалуйста <a href="/login">авторизируйтесь</a>,чтобы продолжить.',
+            'email.unique' => 'У вас уже есть аккаунт с этим адресом электронной почты. Пожалуйста <a href="/login">АВТОРЕЗИРУЙТЕСЬ</a>,чтобы продолжить.',
         ];
     }
 }

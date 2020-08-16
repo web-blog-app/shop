@@ -38,7 +38,7 @@ class Product extends Model
 
     public function presentPrice()    {
         
-        return number_format($this->price, 0, '.', ' ').' руб';
+        return number_format($this->price/100, 0, '.', ' ').' руб';
     }
 
     public function scopeMightAlsoLike($query)

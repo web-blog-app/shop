@@ -49,7 +49,7 @@
       <div class="products-section">
           <span class="go-back-button">Назад</span>
           <div class="mobile-shop-controls">              
-              <button type="button" class="btn open-categories btn-info">Категории</button>
+              <button type="button" style="font-size: 36px;" class="btn open-categories btn-info">Категории</button>
           </div>
           <div class="sort-menu">
               <ul class="sort-menu-list">                  
@@ -76,9 +76,16 @@
                       <div class="cart-button">
                         <form action="{{ route('cart.store', $product) }}" method="POST">
                           {{ csrf_field() }}
-                          <button type="submit" class="button button-plain">Добавить в корзину</button>
+                          <button type="submit" class="button button-plain">Добавить в тележку</button>
                         </form>
                       </div>
+                      
+                        <form action="{{ route('cart.sberOneClick', $product) }}" method="GET">
+                          {{ csrf_field() }}
+                          <p> или купить в 1 клик</p>
+                          <button style="outline: none" type="submit" class="button-loan cart-button"><img class="sber-logo-img" src="https://solaris-rf.ru/img/button-sber.png" alt="sberbank"></button>                          
+                        </form>
+                     
                   </a>
               </div>
               @empty

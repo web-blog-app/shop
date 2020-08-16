@@ -74,13 +74,21 @@
                     @if ($product->quantity > 0)
                     <form action="{{ route('cart.store', $product) }}" method="POST">
                       {{ csrf_field() }}
-                      <button type="submit" class="button product-section-button">Добавить в корзину</button>
+                      <button type="submit" class="button product-section-button">Добавить в тележку</button>
                     </form>
-                    @endif
+                    
                     <p class="logo-container" >
-                    <img class="sber-logo-img" src="{{ asset('/img/logo-sber.png') }}" alt="sberbank">
-                        Вы можете купить данный товар в кредит без переплат!
+                        Вы можете купить данный товар в кредит без переплат в один клик!
                     </p>
+                    <form action="{{ route('cart.sberOneClick', $product) }}" method="GET">
+                          {{ csrf_field() }}
+                          <button style="outline: none" type="submit" class="button-loan cart-button"><img class="sber-logo-img" src="https://solaris-rf.ru/img/button-sber.png" alt="sberbank"></button>
+                    </form>
+                    @else
+                    <p class="logo-container" >
+                        Сожалеем, в данный момент этого товара нет на складе.
+                    </p>
+                    @endif
                 </div>
                 <div class="product-additional-info">
                     <ul class="tabs">

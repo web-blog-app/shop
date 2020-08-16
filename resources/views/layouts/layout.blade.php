@@ -10,17 +10,22 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title> @yield('title', '')</title>
+        <link rel="preconnect" href="//api-maps.yandex.ru">
+	    <link rel="dns-prefetch" href="//api-maps.yandex.ru">
+        <link rel="preconnect" href="https://fonts.googleapis.com/css?family=Montserrat%7CRoboto:300,400,700" as="font" />
+        <link rel="preconnect" href="https://fonts.googleapis.com/css?family=Poiret+One|Ruda&display=swap" as="font" />
+        <link rel="preconnect" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" as="style" />
 
-        
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
         <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat%7CRoboto:300,400,700" rel=" preloadstylesheet">
-        <link rel="preload stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        <link  href="https://fonts.googleapis.com/css?family=Poiret+One|Ruda&display=swap" rel="stylesheet preload">
+       {!! htmlScriptTagJsApi() !!}
+        <link href="https://fonts.googleapis.com/css?family=Montserrat%7CRoboto:300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Poiret+One|Ruda&display=swap" rel="stylesheet">
 
-        <link rel="preload stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
         @yield('extra-css')
     </head>

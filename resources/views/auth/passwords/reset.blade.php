@@ -23,6 +23,7 @@
             <div class="spacer"></div>
             <form class="form-horizontal" method="POST" action="{{ route('password.request') }}">
                 {{ csrf_field() }}
+                
 
                 <input type="hidden" name="token" value="{{ $token }}">
 
@@ -31,7 +32,7 @@
                 <input id="password" type="password" class="form-control" name="password" placeholder="Password" required>
 
                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password" required>
-
+                
                 <div class="login-container">
                     <button type="submit" class="auth-button">Сброс пароля</button>
                 </div>
@@ -48,5 +49,6 @@
     </div>
 </div>
 @endsection
+
 
 

@@ -35,9 +35,8 @@ class ProductsController extends VoyagerBaseController
     public function index(Request $request)
     {
         // GET THE SLUG, ex. 'posts', 'pages', etc.
-        
         $slug = $this->getSlug($request);
-        
+
         // GET THE DataType based on the slug
         $dataType = Voyager::model('DataType')->where('slug', '=', $slug)->first();
 
@@ -124,7 +123,6 @@ class ProductsController extends VoyagerBaseController
     //  Edit an item of our Data Type BR(E)AD
     //
     //****************************************
-    
 
     public function edit(Request $request, $id)
     {
@@ -193,14 +191,13 @@ class ProductsController extends VoyagerBaseController
 
         if (!$request->ajax()) {
             $requestNew = $request;
-            $requestNew['price'] = $request->price;
+            $requestNew['price'] = $request->price * 100;
 
             $this->insertUpdateData($requestNew, $slug, $dataType->editRows, $data);
 
             event(new BreadDataUpdated($dataType, $data));
 
             CategoryProduct::where('product_id', $id)->delete();
-
 
             // Re-insert if there's at least one category checked
             $this->updateProductCategories($request, $id);
@@ -288,7 +285,7 @@ class ProductsController extends VoyagerBaseController
 
         if (!$request->ajax()) {
             $requestNew = $request;
-            $requestNew['price'] = $request->price ;
+            $requestNew['price'] = $request->price * 100;
 
             $data = $this->insertUpdateData($requestNew, $slug, $dataType->addRows, new $dataType->model_name());
 

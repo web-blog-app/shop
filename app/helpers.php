@@ -4,7 +4,7 @@ use Carbon\Carbon;
 
 function presentPrice($price)
 {
-    return number_format( $price, 0, '.', ' ').' руб';
+   return number_format($price / 100, 0).' руб';
 }
 
 function presentDate($date)

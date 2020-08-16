@@ -84,7 +84,6 @@ class CheckoutController extends Controller
         })->values()->toJson();
 
         try {
-            //$charge =Order::create($request->all());
 
             $order = $this->addToOrdersTables($request, null);
 
@@ -102,7 +101,7 @@ class CheckoutController extends Controller
             return back()->withErrors('Error! ' . $e->getMessage());
         }
     }
-    public function sberCheckout(Request $request)
+    public function sberCheckout(CheckoutRequest $request)
     {  
         if ($this->productsAreNoLongerAvailable()) {
             return back()->withErrors('Сожалею! Один из товаров в вашей корзине больше недоступен.');
@@ -110,20 +109,18 @@ class CheckoutController extends Controller
      
        $client = new Client([
             'userName' => 'solaris-rf-credit-api',
-            'password' => 'solaris-rf-credit',    
+            'password' => 'Sberbank1505075!',    
             'language' => 'ru',    
-            'currency' => Currency::RUB,    
-            'apiUri' => Client::API_URI_TEST,    
-            'httpMethod' => HttpClientInterface::METHOD_GET,              
+            'currency' => Currency::RUB,
+            'httpMethod' => HttpClientInterface::METHOD_POST,              
             ]);       
-        $dummy = true;        
+              
         $orderId  = rand();
         $orderAmount = getNumbers()->get('newTotal');
               
         $returnUrl  = 'https://solaris-rf.ru/thankyou';
         $jsonParams = [
             'phone' => $request->phone,
-            'email' => $request->email,
             ]; 
          
         $n = 1;
@@ -142,24 +139,21 @@ class CheckoutController extends Controller
                 'itemCode'     => $item -> id,
             ];
         };
-        
+       
         
         $orderBundle['installments']['productID'] = 10;
         $orderBundle['installments']['productType'] = 'INSTALLMENT';
        
         
-        $result = $client->registerOrder($orderId, $orderAmount, $returnUrl, $orderBundle, $dummy, $jsonParams);
-
-
-        dump($result);
-        
+        $result = $client->registerOrder($orderId, $orderAmount, $returnUrl, $orderBundle, $jsonParams);
         $paymentFormUrl = $result ['formUrl'];
-
+       
+        
 
         $order = $this->addToOrdersTablesSber($request, $orderId, null);
                
          
-         //     Mail::send(new OrderPlaced($order));
+           //Mail::send(new OrderPlaced($order));
 
             
             $this->decreaseQuantities();
@@ -180,8 +174,6 @@ class CheckoutController extends Controller
             'sber_credit' => 'в кредит',
             'billing_email' => $request->email,
             'billing_name' => $request->name,
-            'billing_address' => $request->address,
-            'billing_city' => $request->city,            
             'billing_phone' => $request->phone,            
             'billing_discount' => getNumbers()->get('discount'),
             'billing_discount_code' => getNumbers()->get('code'),
@@ -209,8 +201,6 @@ class CheckoutController extends Controller
             'user_id' => auth()->user() ? auth()->user()->id : null,
             'billing_email' => $request->email,
             'billing_name' => $request->name,
-            'billing_address' => $request->address,
-            'billing_city' => $request->city,            
             'billing_phone' => $request->phone,            
             'billing_discount' => getNumbers()->get('discount'),
             'billing_discount_code' => getNumbers()->get('code'),
