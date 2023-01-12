@@ -20,7 +20,7 @@
         "vue": "^2.5.13"
     },
     "dependencies": {
-        "browser-sync": "^2.23.6",
+        "browser-sync": "^2.27.11",
         "browser-sync-webpack-plugin": "^1.2.0",
         "sanitize-html": "^1.18.2"
     }
